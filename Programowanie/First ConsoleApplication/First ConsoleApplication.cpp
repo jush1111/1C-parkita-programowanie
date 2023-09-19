@@ -5,8 +5,15 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Hello Africa!\n"; //sta³a ³añcuchowa 
+    std::cout << "Witaj Uzytkowniku\n";
     std::cout << "Filip Parkita\n";
+    std::cout << 'x'; //sta³a znakowa
+    std::cout << '\n';
+    std::cout << 21; //sta³a ca³kowitoliczbowa
+    std::cout << 37;
+    std::cout << '\n';
+    std::cout << -6.9; //sta³a rzeczywista 
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
