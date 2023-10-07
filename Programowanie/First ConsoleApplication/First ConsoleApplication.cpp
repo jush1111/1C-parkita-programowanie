@@ -43,6 +43,7 @@ void task2()
 
 int main()
 {
+    setlocale(LC_CTYPE, "polish");
     //task1();
     //task2();
 }
