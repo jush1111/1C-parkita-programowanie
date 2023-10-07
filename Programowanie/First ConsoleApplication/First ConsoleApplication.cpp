@@ -1,31 +1,52 @@
-// First ConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+/*
+*. Program obliczaj¹cy pole prostok¹ta.
+*. Program obliczaj¹cy objêtoœæ sto¿ka.
+*. Program obliczaj¹cy pole ko³a.
+*. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
+*. Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
+*. Program obliczaj¹cy objêtoœæ kuli o promieniu r
+*. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
+*. Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+*. Stwórz program, który pobiera od u¿ytkownika d³ugoœæ w metrach i przelicza j¹ na centymetry i milimetry, wyœwietlaj¹c wynik.
+*. Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
+*/
+
+
+//Napisz program który wczyta liczbê od u¿ytkownika i j¹ wyœwietli na konsoli
+void task1()
+{
+
+    int numberFromUser;
+    std::cout << "Podaj liczbe\n";
+    std::cin >> numberFromUser;
+
+    std::cout << "Podales " << numberFromUser << "\n";
+}
+
+//Program obliczaj¹cy œredni¹ arytmetyczn¹ dwóch liczb.
+void task2()
+{
+    int firstNumber, secondNumber;
+    std::cout << "Podaj pierwsz¹ liczbê\n";
+    std::cin >> firstNumber;
+    std::cout << "Podaj drug¹ liczbê\n";
+    std::cin >> secondNumber;
+
+    int average;
+    average = (firstNumber + secondNumber) / 2;
+
+    std::cout << "Œrednia to: " << average << "\n";
+}
+
+
 
 int main()
 {
-    std::cout << "Hello Africa!\n"; //sta³a ³añcuchowa 
-    std::cout << "Witaj Uzytkowniku\n";
-    std::cout << "Filip Parkita\n";
-    std::cout << 'x'; //sta³a znakowa
-    std::cout << '\n';
-    std::cout << 21; //sta³a ca³kowitoliczbowa
-    std::cout << 37;
-    std::cout << '\n';
-    std::cout << -6.9; //sta³a rzeczywista 
-    std::cout << "pierwsza dana " << 254 << " kolejny tekst\n";
-    std::cout << "adolf\n";
+    //task1();
+    //task2();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
- 
+/*
+Algotytm - skoñczony zbiór instrukcji,
+który rozwi¹zuje zadany problem.
