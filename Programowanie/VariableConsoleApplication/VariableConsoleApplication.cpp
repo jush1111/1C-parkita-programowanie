@@ -55,18 +55,24 @@ void task3()
 //Program obliczaj¹cy pole sto¿ka 
 void task4()
 {
-	int pi, radius, l;
-	std::cout << "podaj promien\n";
-	std::cin >> radius;
-	std::cout << "podaj l\n";
-	std::cin >> l;
-	
+	double high, r, V;
 
-
-
-
+	std::cout << "Podaj wysokoœæ sto¿ka: ";
+	std::cin >> high;
+	std::cout << "Podaj promieñ ko³a w sto¿ku: ";
+	std::cin >> r;
+	V = 1 / 3.0 * 3.14 * (r * r) * high;
+	std::cout << "Objêtoœæ sto¿ka wynosi: " << V << " cm3";
 }
-
+//Program obliczaj¹cy pole ko³a
+void task5()
+{
+	double area, promien;
+	std::cout << "Podaj promieñ ko³a: ";
+	std::cin >> promien;
+	area = 3.14 * (promien * promien);
+	std::cout << "Pole ko³a wynosi: " << area << " cm2";
+}
 
 
 
@@ -78,7 +84,9 @@ int main()
 	setlocale(LC_CTYPE, "polish");
 	//task1();
 	//task2();
-	//task3(); 
+	task3(); 
+	//task4();
+	//task5();
 }
 
 /*
