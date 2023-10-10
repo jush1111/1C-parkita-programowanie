@@ -45,7 +45,6 @@ void task3()
 	std::cout << "podaj pierwszy bok\n";
 	std::cin >> first_side;
 	std::cout << "podaj drugi bok\n";
-	int secondnumber;
 	std::cin >> second_side;
 	int area;
 	area = first_side * second_side;
@@ -67,12 +66,40 @@ void task4()
 //Program obliczaj¹cy pole ko³a
 void task5()
 {
-	double area, promien;
+	double area, radius;
 	std::cout << "Podaj promieñ ko³a: ";
-	std::cin >> promien;
-	area = 3.14 * (promien * promien);
+	std::cin >> radius;
+	area = 3.14 * (radius * radius);
 	std::cout << "Pole ko³a wynosi: " << area << " cm2";
 }
+//Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
+void task6()
+{
+	int a, b;
+	std::cout << "Podaj pierwsza liczbe\n";
+	std::cin >> a; 
+	std::cout << "podaj druga liczbe\n";
+	std::cin >> b;
+
+	int sum;
+	sum = a*a + b*b;
+	std::cout << "suma wynosi " << sum << "\n";
+}
+//Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
+void task7()
+{
+	int b, h, area;
+	std::cout << "podaj pierwszy bok\n";
+	std::cin >> b;
+	std::cout << "podaj wysoksc\n";
+	std::cin >> h;
+	area = b * h / 2;
+	std::cout << "pole trójk¹ta to:";
+	std::cout << area;
+}
+//
+void task8()
+
 
 
 
@@ -84,9 +111,11 @@ int main()
 	setlocale(LC_CTYPE, "polish");
 	//task1();
 	//task2();
-	task3(); 
+	//task3(); 
 	//task4();
 	//task5();
+	//task6();
+	task7();
 }
 
 /*
