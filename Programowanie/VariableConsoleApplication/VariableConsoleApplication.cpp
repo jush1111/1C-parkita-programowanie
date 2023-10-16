@@ -97,8 +97,67 @@ void task7()
 	std::cout << "pole trójk¹ta to:";
 	std::cout << area;
 }
-//
+//Program obliczaj¹cy objêtoœæ kuli o promieniu r
 void task8()
+{
+	double size, ray;
+	std::cout << "Podaj promieñ: ";
+	std::cin >> ray;
+	size = 4 / 3.0 * (3.14 * (ray * ray * ray));
+	std::cout << "Wynik to: " << size << " cm3";
+}
+//Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h*/
+void task9()
+{
+	double firstBase, secondBase, high, radius;
+	std::cout << "Podaj pierwsz¹ podstawe: ";
+	std::cin >> firstBase;
+	std::cout << "Podaj drug¹ podstawe: ";
+	std::cin >> secondBase;
+	std::cout << "Podaj wysokoœæ: ";
+	std::cin >> high;
+	radius = ((firstBase + secondBase) * high) / 2.0;
+	std::cout << "Pole trapezu wynosi: " << radius << " cm2";
+
+}
+//Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.*/
+void task10()
+{
+	double firstRate, secondRate, thirdRate, firstWeight, secondWeight, thirdWeight, weightedAverage;
+	std::cout << "Podaj pierwsz¹ ocenê: ";
+	std::cin >> firstRate;
+	std::cout << "Podaj jej wagê: ";
+	std::cin >> firstWeight;
+	std::cout << "Podaj drug¹ ocenê: ";
+	std::cin >> secondRate;
+	std::cout << "Podaj jej wagê: ";
+	std::cin >> secondWeight;
+	std::cout << "Podaj trzeci¹ ocenê: ";
+	std::cin >> thirdRate;
+	std::cout << "Podaj jej wagê: ";
+	std::cin >> thirdWeight;
+	weightedAverage = ((firstRate * firstWeight) + (secondRate * secondWeight) + (thirdRate * thirdWeight)) / (firstWeight + secondWeight + thirdWeight);
+	std::cout << "Wynik to: " << weightedAverage;
+}
+//Stwórz program, który pobiera od u¿ytkownika d³ugoœæ w metrach i przelicza j¹ na centymetry i milimetry, wyœwietlaj¹c wynik
+void task11()
+{
+	int lengthM, lengthCM, lengthMM;
+	std::cout << "Podaj d³ugoœæ w metrach: ";
+	std::cin >> lengthM;
+	lengthCM = lengthM * 100;
+	lengthMM = lengthCM * 10;
+	std::cout << "D³ugoœæ w centymetrach wynosi: " << lengthCM << " cm, a w milimetrach wynosi: " << lengthMM << " mm.";
+}
+//Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
+void task12()
+{
+	double userMoney, resultMoney;
+	std::cout << "Podaj kwotê w z³otówkach: ";
+	std::cin >> userMoney;
+	resultMoney = userMoney * 0.22;
+	std::cout << "Twoja kwota w dolarach wynosi: " << resultMoney;
+}
 
 
 
@@ -116,6 +175,11 @@ int main()
 	//task5();
 	//task6();
 	//task7();
+	//task8();
+	//task9();
+	//task10();
+	//task11();
+	//task12();
 }
 
 /*
