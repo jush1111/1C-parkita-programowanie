@@ -104,8 +104,14 @@ void task3()
 	else
 			std::cout << "Liczba jest w przedziale\n";
 
+	//wersja 5
+	if (!(number >= 1 && number < 10))
+		std::cout << "Liczba z poza zakresu\n";
+	else
+		std::cout << "Liczba jest w przedziale\n";
+
 }
-//napisz program, który wykona dzielenia dwóch liczb
+
 void task4()
 {
 	int firstNumber, secondNumber;
@@ -173,5 +179,5 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
 }
