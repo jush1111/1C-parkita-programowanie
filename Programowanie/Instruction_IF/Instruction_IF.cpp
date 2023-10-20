@@ -131,7 +131,6 @@ void task4()
  
 
 /*
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
 *. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
 *. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
@@ -170,6 +169,39 @@ void task6()
 }
 // Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹. Wyœwietl wynik.
 void task7()
+{
+	int numberFromUser, absoluteNumber;
+	std::cout << "podaj liczbe calkowita\n";
+	std::cin >> numberFromUser;
+
+	if (numberFromUser > 0)
+		absoluteNumber = numberFromUser;
+	else
+		absoluteNumber = numberFromUser * -1;
+	std::cout << absoluteNumber;
+} 
+//Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
+void task8()
+{
+	int numberDay;
+	std::cout << "podaj liczbe do 1 do 7\n";
+	std::cin >> numberDay;
+
+	if (numberDay == 1);
+		std::cout << "to jest poniedzialek\n";
+	if (numberDay == 2);
+		std::cout << "to jest wtorek\n";
+	if (numberDay == 3);
+		std::cout << "to jest sroda\n";
+	if (numberDay == 4);
+		std::cout << "to jest czwartek\n";
+	if (numberDay == 5);
+		std::cout << "to jest piatek\n";
+	if (numberDay == 6);
+		std::cout << "to jest sobota\n";
+	if (numberDay == 7);
+		std::cout << "to jest niedziela\n";
+}
 
 int main()
 {
@@ -180,4 +212,6 @@ int main()
 	//task4();
 	//task5();
 	//task6();
+	//task7();
+	task8();
 }
