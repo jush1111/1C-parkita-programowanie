@@ -3,16 +3,16 @@
 /*
 Operatory warunkowe:
 > -  wiêksze
-< - mniejsze 
->= - wiêksze b¹dŸ równe 
-<= - mniejsze b¹dŸ równe 
-== - równe 
-!= - ró¿ne 
+< - mniejsze
+>= - wiêksze b¹dŸ równe
+<= - mniejsze b¹dŸ równe
+== - równe
+!= - ró¿ne
 
 Operatory logiczne:
-&& - AND 
-|| - OR 
-! - NOT 
+&& - AND
+|| - OR
+! - NOT
 
 a	b	a&&b	a||b	!a
 F	F	  F		  F		 T
@@ -21,7 +21,7 @@ T	F	  F		  T		 F
 T	T	  T		  T		 F
 
 F - false
-T - true 
+T - true
 */
 
 
@@ -50,20 +50,20 @@ void task2()
 	std::cout << "Podaj liczbe:\n";
 	std::cin >> number;
 
-	int rest = number % 2; 
-/*
-	if (rest == 0)
-		std::cout << "Liczba jest parzysta\n";
+	int rest = number % 2;
+	/*
+		if (rest == 0)
+			std::cout << "Liczba jest parzysta\n";
 
-	if (rest != 0) // rest == 1
-		std::cout << "liczba jest nieparzysta\n";
-*/
+		if (rest != 0) // rest == 1
+			std::cout << "liczba jest nieparzysta\n";
+	*/
 
 	if (rest == 0)
 		std::cout << "Liczba jest parzysta\n";
 	else
 		std::cout << "liczba jest nieparzysta\n";
-} 
+}
 
 //napisz program, który wyœwitli informacje czy liczba jest z zakresu <1 ; 10).
 void task3()
@@ -84,12 +84,12 @@ void task3()
 		std::cout << "liczba z poza zakresu\n";
 
 	//wersja 2
-	if (number >= 1) 
+	if (number >= 1)
 		if (number < 10)
 			std::cout << "Liczba jest w przedziale\n";
 		else
 			std::cout << "liczba z poza zakres\n";
-	else 
+	else
 		std::cout << "liczba z poza zakresu\n";
 
 	//wersja 3
@@ -100,9 +100,9 @@ void task3()
 
 	//wersja 4
 	if (!(number >= 1 && number < 10))
-			std::cout << "liczba z poza zakresu";
+		std::cout << "liczba z poza zakresu";
 	else
-			std::cout << "Liczba jest w przedziale\n";
+		std::cout << "Liczba jest w przedziale\n";
 
 	//wersja 5
 	if (!(number >= 1 && number < 10))
@@ -118,7 +118,7 @@ void task4()
 	std::cout << "podaj liczbe:\n";
 	std::cin >> firstNumber;
 	std::cout << "podaj liczbe:\n";
-	std::cin >> secondNumber; 
+	std::cin >> secondNumber;
 
 	if (secondNumber != 0)
 	{
@@ -126,13 +126,11 @@ void task4()
 		std::cout << "wynik dzielenia " << quoitent << "\n";
 	}
 	else
-		std::cout << "dzielenie przez zero!!!\n"; 
+		std::cout << "dzielenie przez zero!!!\n";
 }
- 
+
 
 /*
-*. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
-*. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
 Na podstawie tych danych oblicz wskaŸnik BMI (Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
@@ -155,18 +153,20 @@ void task5()
 	else
 		std::cout << "te liczby nie sa równe\n";
 }
+
 //Napisz program, który poprosi u¿ytkownika o podanie wieku i sprawdzi, czy osoba jest pe³noletnia. Wyœwietl odpowiedni komunikat.
 void task6()
 {
 	int age;
 	std::cout << "podaj swoj wiek\n";
-	std::cin >> age; 
+	std::cin >> age;
 
 	if (age >= 18)
 		std::cout << "ta osoba jest pelnoletnia\n";
 	else
 		std::cout << "wiek to tylko liczba";
 }
+
 // Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹. Wyœwietl wynik.
 void task7()
 {
@@ -179,7 +179,8 @@ void task7()
 	else
 		absoluteNumber = numberFromUser * -1;
 	std::cout << absoluteNumber;
-} 
+}
+
 //Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
 void task8()
 {
@@ -187,22 +188,50 @@ void task8()
 	std::cout << "podaj liczbe do 1 do 7\n";
 	std::cin >> numberDay;
 
-	if (numberDay == 1);
+	if (numberDay == 1)
 		std::cout << "to jest poniedzialek\n";
-	if (numberDay == 2);
+	if (numberDay == 2)
 		std::cout << "to jest wtorek\n";
-	if (numberDay == 3);
+	if (numberDay == 3)
 		std::cout << "to jest sroda\n";
-	if (numberDay == 4);
+	if (numberDay == 4)
 		std::cout << "to jest czwartek\n";
-	if (numberDay == 5);
+	if (numberDay == 5)
 		std::cout << "to jest piatek\n";
-	if (numberDay == 6);
+	if (numberDay == 6)
 		std::cout << "to jest sobota\n";
-	if (numberDay == 7);
+	if (numberDay == 7)
 		std::cout << "to jest niedziela\n";
+
 }
 
+//Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
+void task9()
+{
+	int numberOne, numberTwo;
+	std::cout << "Podaj pierwsza liczbe ca³kowita\n";
+	std::cin >> numberOne;
+	std::cout << "podaj druga liczbe calkowita\n";
+	std::cin >> numberTwo;
+
+	if (numberOne > numberTwo)
+		std::cout << numberOne;
+	else
+		std::cout << numberTwo;
+}
+
+// Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny.Wyœwietl odpowiedni komunikat.
+void task10()
+{
+	int numberYear;
+	std::cout << "podaj rok\n";
+	std::cin >> numberYear;
+
+	if (numberYear % 400 == 0)
+		std::cout << "jest to rok przestepny\n";
+	else
+		std::cout << "to nie jest rok przestepny\n";
+}
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
@@ -213,5 +242,7 @@ int main()
 	//task5();
 	//task6();
 	//task7();
-	task8();
+	//task8();
+	//task9();
+	task10();
 }
