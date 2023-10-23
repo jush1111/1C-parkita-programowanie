@@ -131,8 +131,6 @@ void task4()
 
 
 /*
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
-*. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
 Na podstawie tych danych oblicz wskaŸnik BMI (Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
 *. Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeœli jest to mo¿liwe. Wyœwietl wynik lub odpowiedni komunikat, jeœli liczba jest ujemna.
@@ -227,12 +225,36 @@ void task10()
 	std::cout << "podaj rok\n";
 	std::cin >> numberYear;
 
-	if (numberYear % 400 == 0)
+	if (numberYear % 4 == 0 && numberYear % 100 != 0 || numberYear % 400 == 0)
 		std::cout << "jest to rok przestepny\n";
 	else
 		std::cout << "to nie jest rok przestepny\n";
 }
+
+//Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
+void task11()
+{
+	int number;
+	std::cout << "podaj liczbe calkowita\n";
+	std::cin >> number;
+
+	if (number % 3 == 0)
+		if (number % 5 == 0)
+			std::cout << "liczba jest podzielna przez 3 i 5\n";
+		else
+			std::cout << "liczba nie dzieli siê na 5\n";
+	else
+		std::cout << "liczba nie dzieli siê na 3\n";
+}
+
+//Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
+void task12()
+{
+
+}
+
 int main()
+
 {
 	setlocale(LC_CTYPE, "polish");
 	//task1();
@@ -244,5 +266,7 @@ int main()
 	//task7();
 	//task8();
 	//task9();
-	task10();
+	//task10();
+	//task11();
+	task12();
 }
