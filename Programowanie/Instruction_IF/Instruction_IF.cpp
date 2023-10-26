@@ -293,7 +293,7 @@ void task13()
 //Napisz program, który poprosi u¿ytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeœli jest to mo¿liwe. Wyœwietl wynik lub odpowiedni komunikat, jeœli liczba jest ujemna.
 void task14()
 {
-	int firstNumber;
+	float firstNumber;
 	std::cout << "podaj dodatnia liczba\n";
 	std::cin >> firstNumber;
 
@@ -318,10 +318,17 @@ void task15()
 	std::cin >> year;
 
 	if (day >= 1 && day <= 31
+		&& month >= 1 && month <= 12
+		&& month >= 1 && month <= 12
+		&& year != 0
 
-		
-		
+		&& ((month == 4 || month == 6 || month == 9 || month == 11) && day != 31)
 
+		&& month == 2 && (day >= 28
+			|| day == 29 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0))
+		&& month == 2 && (day >= 28
+			|| day == 29 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0))
+		)
 	{
 		std::cout << "data" << day << "." << month << "." << year << " jest poprawna\n";
 	}
