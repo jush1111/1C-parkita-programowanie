@@ -339,6 +339,37 @@ void task15()
 		
 }
 
+//napisz program, który ma pobraæ od u¿ytkownika liczbe dodatnia.
+//zabezpiecz program przed pobieraniem liczb ujemnych
+void task16()
+{
+	int numberFromUser;
+	std::cout << "podaj liczbe dodatnia:\n";
+	std::cin >> numberFromUser;
+	if (numberFromUser < 0)
+	{
+		std::cout << "podaj liczbe dodatnia:\n";
+		std::cin >> numberFromUser; 
+		if (numberFromUser < 0)
+		{
+			std::cout << "podaj liczbe dodatnia:\n";
+			std::cin >> numberFromUser;
+			if (numberFromUser < 0)
+			{
+				std::cout << "podaj liczbe dodatnia:\n";
+				std::cin >> numberFromUser;
+				if (numberFromUser < 0)
+				{
+					std::cout << "podaj liczbe dodatnia:\n";
+					std::cin >> numberFromUser;
+					//wklejamy calego IF'a
+				}
+			}
+		}
+	}
+
+	std::cout << "liczba dodatnia pobrana od uzytkownika " << numberFromUser << "\n";
+}
 
 int main()
 
@@ -357,6 +388,7 @@ int main()
 	//task11();
 	//task12();
 	//task13();
-	task14();
+	//task14();
 	//task15();
+	//task16();
 }
