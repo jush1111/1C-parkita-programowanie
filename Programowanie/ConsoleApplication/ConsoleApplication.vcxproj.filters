@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication.cpp">
+    <ClCompile Include="do_while.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
