@@ -123,10 +123,19 @@ void task4()
 }
 
 
+//napisz program ktory policzy sume cyfr podanej przez uzytkownika 
+void task5()
+{
+	int number;
+
+}
+
+
 	int main()
 	{
 		//task1();
 		//task2();
 		//task3();
-		task4();
+		//task4();
+		task5();
 	}
