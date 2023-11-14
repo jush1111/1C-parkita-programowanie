@@ -127,15 +127,99 @@ void task4()
 void task5()
 {
 	int number;
+	std::cout << "Podaj liczbê\n";
+	std::cin >> number;
+
+	int sum = 0;
+	int rest;
+
+	/*
+	rest = number % 10;
+	sum = sum + rest;
+	number = number / 10;
+	if (number != 0)
+	{
+		rest = number % 10;
+		sum = sum + rest;
+		number = number / 10;
+		if (number != 0)
+		{
+			rest = number % 10;
+			sum = sum + rest;
+			number = number / 10;
+			if (number != 0)
+			{
+				rest = number % 10;
+				sum = sum + rest;
+				number = number / 10;
+				//if (number != 0) ...
+			}
+		}
+	}
+	*/
+
+	do
+	{
+		rest = number % 10;
+		sum = sum + rest;
+		number = number / 10;
+	} while (number != 0);
+
+	std::cout << "Suma " << sum << "\n";
+	//4125
+}
+//Poproœ u¿ytkownika o podawanie liczb, a¿ wporwadzi liczbe zero.
+//oblicz sumeo raz srednia arytmetyczna wprowadzonych liczb
+void task6()
+{
+	int number;
+	int sum = 0;
+	int numberOfNumbers = 0;
+	/*
+		std::cout << "podaj liczbe:\n";
+		std::cin >> number;
+		sum = sum + number;
+		numberOfNumbers++;
+		if (number != 0)
+		{
+			std::cout << "podaj liczbe:\n";
+			std::cin >> number;
+			sum = sum + number;
+			numberOfNumbers++;
+			if (number != 0)
+			{
+				std::cout << "podaj liczbe:\n";
+				std::cin >> number;
+				sum = sum + number;
+				numberOfNumbers++;
+				if (number != 0)
+					//if....
+			}
+		}
+	 */
+
+	do
+	{
+
+		std::cout << "podaj liczbe:\n";
+		std::cin >> number;
+		sum = sum + number;
+		numberOfNumbers++;
+	} while (number != 0);
+	std::cout << "podaj liczbe:\n" << sum << "\n";
+	double avg = sum * 1.0 / numberOfNumbers;
+	std::cout << "srednia" << avg << "\n";
 
 }
 
 
-	int main()
-	{
-		//task1();
-		//task2();
-		//task3();
-		//task4();
-		task5();
-	}
+int main()
+{
+	//task1();
+	//task2();
+	//task3();
+	//task4();
+	//task5();
+	task6();
+
+}
