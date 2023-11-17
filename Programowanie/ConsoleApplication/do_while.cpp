@@ -216,18 +216,16 @@ void task6()
 //Nastepnie program powinien obliczyc i wyswietlic liczbe cyfr
 void task7()
 {
-	double number;
+	int number, rest;
 	std::cout << "podaj liczbe calkowita:\n";
 	std::cin >> number;	
 
-	int secondNumber = 0;
 	do
 	{
-		for (; number > 1; secondNumber++)
-			number = number / 10;
+		rest = number % 10;
+		std::cout << rest << ",";
+		number = number / 10;
 	} while (number != 0);
-	
-	std::cout << "liczba cyfr" << secondNumber << "\n";
 }
 
 int main()
@@ -239,5 +237,5 @@ int main()
 	//task5();
 	//task6();
 	task7();
-
+	//task8();
 }
