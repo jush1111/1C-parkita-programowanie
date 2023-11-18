@@ -220,6 +220,25 @@ void task7()
 	std::cout << "podaj liczbe calkowita:\n";
 	std::cin >> number;	
 
+	/*
+	rest = number % 10;
+	std::cout << rest << ", ";
+	number = number / 10;
+	if (number != 0)
+	{
+		rest = number % 10;
+		std::cout << rest << ", ";
+		number = number / 10;
+		if (number != 0)
+		{
+			rest = number % 10;
+			std::cout << rest << ", ";
+			number = number / 10;
+			//if ...
+		}
+	}
+	*/
+
 	do
 	{
 		rest = number % 10;
