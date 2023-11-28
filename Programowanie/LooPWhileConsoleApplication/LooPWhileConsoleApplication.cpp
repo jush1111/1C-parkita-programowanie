@@ -65,13 +65,60 @@ void task2()
 		nwd--;
 	} 
 	std::cout << "NWD = " << nwd << "\n";
+
+
+
+	//wersja 2
+	nwd = 1;
+	int dividend = 2;
+	int tmpFirstNumber = firstNumber, tmpSecondNumber = secondNumber;
+	while (tmpFirstNumber >= dividend
+		&& tmpSecondNumber >= dividend)
+	{
+		if (tmpFirstNumber % dividend == 0
+			&& tmpSecondNumber % dividend == 0)
+		{
+			tmpFirstNumber = tmpFirstNumber / dividend;
+			tmpSecondNumber /= dividend;
+			nwd *= dividend;
+		}
+		else
+			dividend++;
+	}
+	std::cout << "NWD = " << nwd << "\n";
+
+
+
+	//wersja 3
+	//NWD(a, b) = a				jesli b = 0
+	//NWD(a, b) = NWD(b, a %  b) jesli b != 0 
+
+	int a = firstNumber, b = secondNumber;
+	while (b != 0)
+	{
+		int tmpA = a;
+		a = b;
+		b = tmpA % b;
+		
+	}
+	nwd = a;
+	std::cout << "NWD = " << nwd << "\n";
+		
 }
 
+//Sprawdzanie czy liczba jest palindromem
+void task3()
+{
+	int number;
+	std::cout << "podaj liczbe \n";
+	std::cin >> number;
+	
+}
 
 
 	int main()
 	{
 		//task1();
-		task2();
-		//task3();
+		//task2();
+		task3();
 	}
