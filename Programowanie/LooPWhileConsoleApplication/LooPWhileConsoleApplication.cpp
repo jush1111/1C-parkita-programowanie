@@ -138,6 +138,7 @@ void task3()
 
 	while (leftNumber > 10)
 	
+		,
 	
 }
 
