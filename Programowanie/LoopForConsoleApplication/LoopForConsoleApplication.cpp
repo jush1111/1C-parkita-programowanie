@@ -8,7 +8,7 @@ void task1()
 	std::cout << "Podaj ile razy wyswietlic\n";
 	std::cin >> howManyTimes;
 
-	
+
 	for (int i = 0; i != howManyTimes; i++)
 	{
 		std::cout << "hello world\n";
@@ -21,8 +21,8 @@ void task2()
 	int upperRange;
 	std::cout << "Podaj gurna granice do wyswietlenia\n";
 	std::cin >> upperRange;
-	
-	for (int i = 0; i <= upperRange; i +=2)
+
+	for (int i = 0; i <= upperRange; i += 2)
 	{
 		std::cout << i << "\n";
 	}
@@ -31,8 +31,6 @@ void task2()
 
 
 /*
-* Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
-* Program obliczający n!.
 * Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
 * Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
 * Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
@@ -62,7 +60,7 @@ void task3()
 
 //Program sprawdzający czy podana liczba jest liczbą doskonałą(czyli taką, której suma dzielników(z wyłączeniem samej siebie)
 // jest równa danej liczbie, np. 6 jest liczbą doskonałą, ponieważ 1 + 2 + 3 = 6).
-void task4()																																																																																																																																																																																																																																																																																																																																																																																				
+void task4()
 {
 	int number;
 	std::cout << "podaj liczbe\n";
@@ -75,7 +73,7 @@ void task4()
 		{
 			//std::cout << i << "\n";
 			sum += i;
-		} 
+		}
 	}
 	std::cout << "suma dzielnikow " << sum << "\n";
 
@@ -100,7 +98,36 @@ void task4()
 		std::cout << "liczba jest doskonala\n";
 	else
 		std::cout << "liczba nie jest doskonala\n";
-	
+
+}
+
+
+//Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
+void task5()
+{
+	int something;
+
+	for (int a = 1; a < 11; a++)
+	{
+		something = a * a;
+		std::cout << something << "\n";
+	}
+}
+
+// Program obliczający n!.
+void task6()
+{
+	unsigned long long silnia, idk ;
+	std::cout << "Podaj liczbę ktora bedzie silnia ";
+	std::cin >> silnia;
+
+	idk = silnia;
+	silnia = 1;
+	for (int number = 1; number <= idk ; number++)
+	{
+		silnia = silnia * number;
+	}
+	std::cout << silnia << "\n";
 }
 
 
@@ -109,5 +136,7 @@ int main()
 	//task1();
 	//task2();
 	//task3();
-	task4();
+	//task4();
+	//task5();
+	task6();
 }
