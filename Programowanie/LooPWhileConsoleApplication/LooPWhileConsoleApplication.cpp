@@ -171,10 +171,41 @@ void task3()
 	
 }
 
+//napisz program, ktory wyswitli "hello world" tyle razy ile chce uzytkownik
+void task4()
+{
+	int howManyTimes;
+	std::cout << "Podaj ile razy wyswietlic\n";
+	std::cin >> howManyTimes;
+
+	int i = 0;
+	while (i != howManyTimes)
+	{
+		std::cout << "hello world\n";
+		i++;
+	}
+}
+
+//Napisz program, który wyswietli liczby parzyste do podanej prez uzytkownika liczby
+void task5()
+{
+	int upperRange;
+	std::cout << "Podaj gurna granice do wyswietlenia\n";
+	std::cin >> upperRange;
+
+	int i = 0; 
+	while (i <= upperRange)
+	{
+		std::cout << i << "\n";
+		i += 2;
+	}
+}
 
 	int main()
 	{
 		//task1();
 		//task2();
-		task3();
+		//task3();
+		//task4();
+		task5();
 	}

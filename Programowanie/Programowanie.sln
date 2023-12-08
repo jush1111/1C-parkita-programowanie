@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopDoWhileConsoleApplicati
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LooPWhileConsoleApplication", "LooPWhileConsoleApplication\LooPWhileConsoleApplication.vcxproj", "{AC268999-B484-4E4E-9A1E-F2E5499B1A6A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopForConsoleApplication", "LoopForConsoleApplication\LoopForConsoleApplication.vcxproj", "{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -65,6 +67,14 @@ Global
 		{AC268999-B484-4E4E-9A1E-F2E5499B1A6A}.Release|x64.Build.0 = Release|x64
 		{AC268999-B484-4E4E-9A1E-F2E5499B1A6A}.Release|x86.ActiveCfg = Release|Win32
 		{AC268999-B484-4E4E-9A1E-F2E5499B1A6A}.Release|x86.Build.0 = Release|Win32
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Debug|x64.ActiveCfg = Debug|x64
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Debug|x64.Build.0 = Debug|x64
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Debug|x86.ActiveCfg = Debug|Win32
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Debug|x86.Build.0 = Debug|Win32
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Release|x64.ActiveCfg = Release|x64
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Release|x64.Build.0 = Release|x64
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Release|x86.ActiveCfg = Release|Win32
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +85,7 @@ Global
 		{65B71878-9FD6-4E6F-B86A-7E12CACA7BCC} = {64751CD2-8030-4712-B19A-060ACF2F4C13}
 		{731FC477-A59E-4783-9CE0-373B5467E2FD} = {64751CD2-8030-4712-B19A-060ACF2F4C13}
 		{AC268999-B484-4E4E-9A1E-F2E5499B1A6A} = {64751CD2-8030-4712-B19A-060ACF2F4C13}
+		{9C327E69-4AE2-4885-B6A7-A9D9032FF7E9} = {64751CD2-8030-4712-B19A-060ACF2F4C13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56F6D548-668F-4DCF-B4AF-05BBF7C0E832}
