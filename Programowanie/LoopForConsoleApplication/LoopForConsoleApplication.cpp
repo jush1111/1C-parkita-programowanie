@@ -31,11 +31,7 @@ void task2()
 
 
 /*
-* Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
-* Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
-* Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
 * Program obliczający sumę kwadratów liczb od 1 do 10
-* Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
 * Program, kóry wyświetli poniższe cztery zwory:
 	****       54321        121212        122333
 	***        65432        212121        223334444
@@ -130,6 +126,62 @@ void task6()
 	std::cout << silnia << "\n";
 }
 
+//Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
+void task7()
+{
+	int number;
+	std::cout << "podaj liczbe\n";
+	std::cin >> number;
+
+	long long factorial = 1;
+	for (int i = 1; i <= number; i++)
+	{
+		factorial = factorial * i;
+		std::cout << i << "!=" << factorial << "\n";
+	}
+	
+}
+
+// Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
+void task8()
+{
+	for(int x = 0; x < 10; x++)
+	{
+		for (int y = 0; y < 10; y++)
+		{
+			std::cout << x << "x" << y << "=" << x * y << "\t";
+		}
+		std::cout << "\n";
+	}
+}
+
+//Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
+void task9()
+{
+	for (int a = 1; a < 101; a++)
+	{
+
+	}
+}
+
+//
+
+//Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, 
+// np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+void task11()
+{
+	int f2 = 0;
+	int f1 = 1;
+	std::cout << f2 << ", " << f1 << ", ";
+	for (int i = 2; i < 20; i++)
+	{
+		int f = f1 + f2;
+		std::cout << f << ", ";
+		f2 = f1;
+		f1 = f;
+
+	}
+}
 
 int main()
 {
@@ -138,5 +190,9 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
+	//task7();
+	//task8();
+	//task9();
+	task11();
 }
