@@ -31,12 +31,6 @@ void task2()
 
 
 /*
-* Program obliczający sumę kwadratów liczb od 1 do 10
-* Program, kóry wyświetli poniższe cztery zwory:
-	****       54321        121212        122333
-	***        65432        212121        223334444
-	**         76543        121212        333444455555
-	*          87654        212121        444455555666666
 * Oblicz sumę szeregu 1/1^2 + 1/2^2 + 1/3^2 + ... +1/n^2. Jeżeli się nie pomylisz, to dla odpowiednio dużej wartości n po przemnożeniu jej przez 6 i spierwiastkowaniu powinieneś otrzymać wartość liczby π (suma szeregu jest równa π2/6). Zwróć uwagę, że pierwsza wartość indeksu to 1, a nie 0. Dokładność obliczeń można sprawdzić porównując z wartością odczytaną z własności Math.PI.
 * Rozkład liczby na czynniki pierwsze
 */
@@ -158,17 +152,19 @@ void task8()
 //Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
 void task9()
 {
+	
 	for (int a = 1; a < 101; a++)
 	{
-
+		if (a % 3 == 0)
+		{
+			std::cout  << "ta liczba dzieli sie przez 3: " <<  a  << "\n";
+		}
 	}
 }
 
-//
-
 //Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, 
 // np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
-void task11()
+void task10()
 {
 	int f2 = 0;
 	int f1 = 1;
@@ -183,6 +179,49 @@ void task11()
 	}
 }
 
+//Program obliczający sumę kwadratów liczb od 1 do 10
+void task11()
+{
+	int number;
+	int sum = 0;
+	for (int a = 1; a < 11; a++)
+	{
+		number = a * a;
+		sum = number + sum ;
+	}
+	std::cout << "suma kwadratow to: " << sum << "\n";
+}
+
+// Program, kóry wyświetli poniższe cztery zwory:
+//****54321        121212        122333
+//* **65432        212121        223334444
+//* *76543        121212        333444455555
+//* 87654        212121        444455555666666
+void task12()
+{
+	//wzór 1
+	const int NUMBER_OF_LINES = 4;
+	for (int lineNumber = 0; lineNumber < NUMBER_OF_LINES; lineNumber++)
+	{
+		for (size_t i = 0; i < NUMBER_OF_LINES - lineNumber; i++)
+		std::cout << "*";
+
+		std::cout << "\n";
+	}
+	
+	//wzor 2
+	for (int lineNumber = 0; lineNumber < NUMBER_OF_LINES; lineNumber++)
+	{
+		for (int i = 0; i > 5; i++)
+			std::cout << i + lineNumber;
+
+		std::cout << "\n";
+	}
+
+
+}
+
+
 int main()
 {
 	//task1();
@@ -194,5 +233,7 @@ int main()
 	//task7();
 	//task8();
 	//task9();
-	task11();
+	//task10();
+	//task11();
+	task12();
 }
