@@ -82,7 +82,6 @@ void task5()
 
 
 /*
-* Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
 * Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
 * Program wyci¹gaj¹cy informacje z numeru PESEL
 * Program implementuj¹cy algorytm szyfrowania Cezara (proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
@@ -135,10 +134,44 @@ void task7()
 //Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
 void task8()
 {
-	std::string decimalNumber;
-	std::cout << "podaj liczbe calkowita w systemie dziesietnym\n";
-	std::cin >> decimalNumber;
+	int numberFromUser;
+	int tmpNumber;
+	std::string tmpNumberInBin;
+	std::string numberInBin;
+	std::cout << "Podaje liczbe: \n";
+	std::cin >> numberFromUser;
+	tmpNumber = numberFromUser;
+
+	do
+	{
+		tmpNumberInBin = tmpNumber / 2;
+		numberInBin = numberInBin + tmpNumberInBin;
+	} while (tmpNumber == 0);
+
+	std::cout << numberInBin << "\n";
+
 	
+	
+} 
+
+
+// Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem 
+// (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+void task9()
+{
+	std::string textFromUser;
+	std::cout << "podaj tekst\n";
+	std::cin >> textFromUser;
+
+	//wersja 1
+	std::string reverseText;
+	for(int)
+
+	if (textFromUser == reverseText)
+	
+		std::cout << "ten tekst jest palindromem\n";
+	else
+		std::cout << "ten tekst nie jest palindromem\n";
 	
 }
 
@@ -152,7 +185,8 @@ int main()
 	//task5();
 	//task6();
 	//task7();
-	task8();
+	//task8();
+	task9();
 }
 
 /*
