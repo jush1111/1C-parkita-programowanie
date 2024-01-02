@@ -164,16 +164,45 @@ void task9()
 	std::cin >> textFromUser;
 
 	//wersja 1
-	std::string reverseText;
-	for(int)
+	std::string reverseText = "";
+	
+	for (int i = textFromUser.length() - 1; i >= 0; i--)
+	{
+		reverseText = reverseText + textFromUser[i];
+	}
+
+	/*
+	for (int i = 0; i < textFromUser.length(); i++)
+	{
+		reverseText = reverseText[i] + textFromUser;
+	}
+	*/
 
 	if (textFromUser == reverseText)
-	
 		std::cout << "ten tekst jest palindromem\n";
 	else
 		std::cout << "ten tekst nie jest palindromem\n";
-	
+
+	//wersja 2
+	bool isPalindrome = true;
+
+	for (int signFromBegining = 0, signFromEnd = textFromUser.length() - 1; signFromBegining < signFromEnd; signFromBegining++, signFromEnd--)
+	{
+		if (textFromUser[signFromBegining] != textFromUser[signFromEnd])
+		{
+			isPalindrome = false;
+			break;
+		}
+	}
+
+	if (isPalindrome /*== true*/)
+		std::cout << "Ten tekst jest palindromem\n";
+	else
+		std::cout << "Ten tekst nie jest palindromem\n";
 }
+
+
+ 
 
 int main()
 {
