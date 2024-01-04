@@ -87,7 +87,6 @@ void task5()
 * Program implementuj¹cy algorytm szyfrowania Cezara (proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
 * Program który na wejœciu przyjmie równanie a na wyjœciu da równanie w odwrotnej notacji polskiej ONP. Np. na wejœciu 2+3*4 na wyjœcu da 234*+
 * Program, który na wejœciu przyjmie rówanie w ONP a na wyjœciu wyœwietli wynik rówania.
-* Algorytm szyfrowania AtBash Cipher - algorytm szyfruj¹cy, w którym ka¿da litera jest zamieniana na literê z przeciwnej strony alfabetu (np. A na Z, B na Y itd.)
 */
 
 // Napisz program, który bêdzie prosi³ o has³o. Nie przepuœci dalej dopóki nie zostanie ono podane prawid³owo.
@@ -201,6 +200,40 @@ void task9()
 		std::cout << "Ten tekst nie jest palindromem\n";
 }
 
+//Algorytm szyfrowania AtBash Cipher - algorytm szyfruj¹cy, w którym ka¿da litera jest zamieniana na literê z przeciwnej strony alfabetu
+//  (np. A na Z, B na Y itd.)
+void task10()
+{
+	std::string textFromUser;
+	std::cout << "podaj tekst\n";
+	std::cin >> textFromUser;
+
+	for (int i = 0; i < textFromUser.length(); i++)
+	{
+		if (textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
+		 textFromUser[i] = 'z' - (textFromUser[i] - 'a');
+
+		if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z')
+			textFromUser[i] = 'Z' - (textFromUser[i] - 'A');
+
+		if (textFromUser[i] >= '0' && textFromUser[i] <= '9')
+			textFromUser[i] = '9' - (textFromUser[i] - '0');
+	}
+	std::cout << "zaszyfrowany tekst: " << textFromUser << "\n";
+
+	for (int i = 0; i < textFromUser.length(); i++)
+	{
+		if (textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
+			textFromUser[i] = 'a' + ('z' - textFromUser[i]);
+
+		if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z')
+			textFromUser[i] = 'A' + ('Z' - textFromUser[i]);
+
+		if (textFromUser[i] >= '0' && textFromUser[i] <= '9')
+			textFromUser[i] = '0' + ('9' - textFromUser[i]);
+	}
+	std::cout << "rozszyfrowany tekst " << textFromUser << "\n";
+}
 
  
 
@@ -215,7 +248,8 @@ int main()
 	//task6();
 	//task7();
 	//task8();
-	task9();
+	//task9();
+	task10();
 }
 
 /*
