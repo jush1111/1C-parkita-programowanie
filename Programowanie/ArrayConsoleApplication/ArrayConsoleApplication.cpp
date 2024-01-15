@@ -19,6 +19,7 @@ void task1()
 	std::cout << "\n";
 }
 
+//Napisz program obliczający średnią arytmetyczną elementów w tablicy liczb całkowitych.
 void task2()
 {
 	//LOWER_RANGE; UPPER_RANGE > przy założeniu, że LOWER_RANGE <= UPPER_RANGE
@@ -45,8 +46,27 @@ void task2()
 
 	double avg = sum * 1.0 / ARRAY_SIZE;
 	std::cout << "srdnia wynosi: " << avg << "\n";
+
 }
 
+//Napisz program, który uzupełni tablicę liczbami losowymi a następnie znajdzie minimum oraz maksimum.
+void task3()
+{
+	const unsigned short LOWER_RANGE = 5;
+	const unsigned short UPPER_RANGE = 7;
+
+	const unsigned short ARRAY_SIZE = 3;
+	int numbers[ARRAY_SIZE];
+
+	srand(time(0));
+	std::cout << "wylosowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
+	{
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+		std::cout << numbers[i] << ", ";
+	}
+
+}
 
 int main()
 {
