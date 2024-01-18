@@ -106,6 +106,10 @@ void task4()
 			std::cout << numberToCheck << ",";
 	}
 	std::cout << "gotowe\n";
+
+
+
+
 }
 
 int main()
