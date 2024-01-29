@@ -12,7 +12,7 @@ void task1()
 		std::cout << "Hive a number";
 		std::cin >> number[i];
 	}
-	for (int i = ARRAY_SgIZE - 1; i >= 0; i--)
+	for (int i = ARRAY_SIZE - 1; i >= 0; i--)
 	{
 		std::cout << number[i] << ", ";
 	}
@@ -267,7 +267,7 @@ void task8()
 	std::cout << "posortowane liczby:\n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
-		std::cout << jestem_gejem[i] << ",";
+		std::cout << numbers[i] << ",";
 	}
 	std::cout << "\n";
 }
