@@ -61,7 +61,12 @@ void task6_GetNumber(int& number)
     std::cin >> number;
 }
 
-
+int sumOfNumbers(int fn, int sn)
+{
+    int s;
+    s = fn + sn;
+    return s;
+}
 
 
 int main()
@@ -107,8 +112,20 @@ int main()
     //task5(NUMBER); //B£¥D - przez parametr mozna przekazac tylko zmienna
     */
 
+    /*
     int numberFromUser = 5;
     task6_GetNumber(numberFromUser);
     std::cout << "Uzytkownik podal liczbe " << numberFromUser << "\n"; 
+    */
+
+    int numberFromUser = 16;
+
+    double result = sqrt(numberFromUser);
+
+    int firstNumber, secondNumber, sum;
+    firstNumber = 9;
+    secondNumber = 1;
+    sum = sumOfNumbers(firstNumber, secondNumber);
+    std::cout << sum << "\n";
 }
 
