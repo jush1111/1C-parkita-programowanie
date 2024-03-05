@@ -68,6 +68,39 @@ int sumOfNumbers(int fn, int sn)
     return s;
 }
 
+//napisz funkcje ktora obliczy wartosc silni i ja zwroci
+long long calculateFactorial(long long n)
+{
+    long long factorial = 1;
+    for (int i = 2; i <= n; i++)
+    {
+        factorial = factorial * i;
+    }
+    return factorial;
+}
+
+long long calculateFactorialV2(long long n)
+{
+    if (n <= 1)
+        return 1;
+    else
+        return n * calculateFactorialV2(n - 1);
+}
+
+void task7()
+{
+    int number;
+    std::cout << "podaj liczbe: \n";
+    std::cin >> number;
+    
+    long long factorial = calculateFactorialV2(number);
+
+    std::cout << "silnia jest rowna " << factorial << "\n";
+}
+
+
+
+
 
 int main()
 {
