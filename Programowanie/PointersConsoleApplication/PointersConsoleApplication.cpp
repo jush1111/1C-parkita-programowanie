@@ -23,13 +23,47 @@ void task1()
     std::cout << "zawartosc pierwszej komórki " << *(tab + 1 ) << "\n";
 }
 
+void task2()
+{
+    int firstNumber = 48;
+    int secondNumber = 697;
 
+    int* ptr = &firstNumber;
+
+    std::cout << "Adres pierwszej zmiennej \t" << &firstNumber << "\n";
+    std::cout << "Adres zmiennej \t\t\t" << ptr << "\n";
+    std::cout << "Zawartoœæ pierszej zmiennej \t" << firstNumber << "\n";
+    std::cout << "Zawartoœæ pierszej zmiennej \t" << *ptr << "\n";
+
+    ptr = &secondNumber;
+    std::cout << "Zawartoœæ drugiej zmiennej \t" << *ptr << "\n";
+
+    ptr = &secondNumber;
+    std::cout << "Zawartoœæ drugiej zmiennej \t" << *ptr << "\n";
+
+    ptr = new int;
+
+    std::cout << "Adres nowego obszaru \t\t\t" << ptr << "\n";
+    *ptr = 5;
+    //std::cin >> *ptr;
+    std::cout << "Zawartoœæ w nowym obszarze \t" << *ptr << "\n";
+
+    delete ptr;
+    ptr = NULL;
+
+    /*
+    while (true)
+        new long long;
+    */
+}
+}
 
 
 
 int main()
 {
     task1();
+    //task2();
 }
 
 
