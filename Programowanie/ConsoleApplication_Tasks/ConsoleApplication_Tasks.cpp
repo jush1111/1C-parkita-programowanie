@@ -297,8 +297,107 @@ void task2()
 }
 #pragma endregion zadanie 2
 
+
+/*
+ZADANIE
+Symulator rzutu kostk¹
+
+Napisz program, który bêdzie symulowa³ rzut kostk¹. Program powinien umo¿liwiaæ u¿ytkownikowi wybór rodzaju kostki (np. 6-œcienna, 10-œcienna, 20-œcienna) oraz iloœæ rzutów. Po wykonaniu rzutów, program powinien wyœwietliæ wyniki oraz sumê otrzymanych wartoœci.
+
+Instrukcje:
+
+Poproœ u¿ytkownika o wybór rodzaju kostki (np. 6-œcienna, 10-œcienna, 20-œcienna).
+Poproœ u¿ytkownika o podanie iloœci rzutów.
+Wykonaj podan¹ liczbê rzutów wybranej kostk¹, zapisuj¹c wyniki.
+Wyœwietl otrzymane wyniki oraz sumê otrzymanych wartoœci.
+Przyk³adowe dzia³anie programu:
+
+Symulator rzutu kostk¹
+-----------------------
+
+Wybierz rodzaj kostki (6/10/20): 10
+Ile rzutów chcesz wykonaæ?: 5
+
+Wyniki rzutów kostk¹ 10-œcienn¹:
+1. Rzut 1: 7
+2. Rzut 2: 3
+3. Rzut 3: 10
+4. Rzut 4: 5
+5. Rzut 5: 8
+
+Suma wyników: 33
+*/
+
+#pragma region zadanie 3
+
+void showMenuCube()
+{
+	system("cls");
+	std::cout << "Symulator rzutu kostk¹\n";
+	std::cout << "-----------------\n";
+	std::cout << "\n";
+	std::cout << "Wybierz rodzaj kostki (6/10/20): \n";
+}
+
+void throwCube(short typeOfCube, short howManyThrows)
+{
+	srand(time(NULL));
+
+	std::cout << "Wyniki rzutów kostk¹ 10-œcienn¹:\n";
+
+	short drawnNumber;
+	for (int i = 1; i < howManyThrows + 1; i++)
+	{
+		drawnNumber = rand() % (typeOfCube - 1 + 1) + 1;
+		std::cout << "Rzut " << i << ": " << drawnNumber << "\n";
+	}
+	std::cout << "\n";
+	system("pause");
+}
+
+void task3()
+{
+	while (true)
+	{
+		showMenuCube();
+
+		short typeOfCube;
+		std::cin >> typeOfCube;
+
+		std::cout << "Ile rzutów chcesz wykonaæ?: \n";
+
+		short howManyThrows;
+		std::cin >> howManyThrows;
+
+		if (typeOfCube == 6)
+		{
+			throwCube(typeOfCube, howManyThrows);
+		}
+		else if (typeOfCube == 10)
+		{
+			throwCube(typeOfCube, howManyThrows);
+		}
+		else if (typeOfCube == 20)
+		{
+			throwCube(typeOfCube, howManyThrows);
+		}
+		else
+		{
+			std::cout << "Z³y wybór!";
+			system("pause");
+			continue;
+		}
+		break;
+	}
+}
+#pragma endregion zadanie 3
+
+
 int main()
 {
 	task1();
+	task2();
+	task3();
+
 }
 
