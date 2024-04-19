@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-
+#include <windows.h>
+#include <conio.h>
 /*
 Zadanie 1: Tworzenie prostego kalkulatora
 Napisz program, który bêdzie dzia³a³ jako prosty kalkulator
@@ -393,11 +394,70 @@ void task3()
 #pragma endregion zadanie 3
 
 
+//pojawienie sie gwaizdki w losowym miejscu i znika
+void getConsolResolution(int& consoleWidth, int& consoleHeight)
+{
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+
+	consoleWidth = csbi.srWindow.Right - csbi.srWindow.Left;
+	consoleHeight = csbi.srWindow.Bottom - csbi.srWindow.Top;
+}
+void setCursor(int x, int y)
+{
+	COORD c;
+	c.X = x;
+	c.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+}
+void drowsky(int x, int y)
+{
+	setCursor(x, y);
+	std::cout << "*";
+	Sleep(10);
+	std::cout << "*";
+}
+
+void deleteStar(int x, int y, int consolWidth, int consolHeight)
+{
+	for (int i = 1; 1 < 10; i++)
+	{
+		int x = rand() % (consolWidth);
+		int y = rand() % (consolHeight);
+		setCursor(x, y);
+		std::cout <<   "*";
+		Sleep(10);
+		x = rand() % (consolWidth);
+		y = rand() % (consolHeight);
+			setCursor(x, y );
+		std::cout << "*";
+	}
+
+}
+
+void task5()
+{
+	srand(time(NULL));
+	int consolWidth;
+	int consolHeight;
+	getConsolResolution(consolWidth, consolHeight);
+	int x = rand() % (consolWidth);
+	int y = rand() % (consolHeight);
+
+	while (true)
+	{
+		drowsky(x, y);
+	}
+}
+
+
+
 int main()
 {
-	task1();
-	task2();
-	task3();
+	//task1();
+	//task2();
+	//task3();
+	task5();
 
 }
 
