@@ -437,7 +437,7 @@ void deleteStar(int x, int y, int consolWidth, int consolHeight)
 
 
 void task5()
-{S
+{
 	srand(time(NULL));
 	int consolWidth;
 	int consolHeight;
