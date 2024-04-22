@@ -410,27 +410,28 @@ void setCursor(int x, int y)
 	c.Y = y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
 }
-void drowsky(int x, int y)
+void drowsky( int x, int y)
 {
 	setCursor(x, y);
 	std::cout << "*";
-	Sleep(10);
-	std::cout << "*";
+	Sleep(100);
+	setCursor(x, y);
+	std::cout << " ";
 }
 
 void deleteStar(int x, int y, int consolWidth, int consolHeight)
 {
 	for (int i = 1; 1 < 10; i++)
 	{
-		int x = rand() % (consolWidth);
-		int y = rand() % (consolHeight);
+		int x = (consolWidth);
+		int y = (consolHeight);
 		setCursor(x, y);
-		std::cout <<   "*";
-		Sleep(10);
-		x = rand() % (consolWidth);
-		y = rand() % (consolHeight);
-			setCursor(x, y );
 		std::cout << "*";
+		Sleep(100);
+		x = (consolWidth);
+		y =  (consolHeight);
+		setCursor(x, y );
+		std::cout << " ";
 	}
 
 }
