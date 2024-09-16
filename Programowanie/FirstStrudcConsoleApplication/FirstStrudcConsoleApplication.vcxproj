@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="FirstStrudcConsoleApplication.cpp" />
     <ClCompile Include="Task1.cpp" />
+    <ClCompile Include="Task2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tasks.h" />
