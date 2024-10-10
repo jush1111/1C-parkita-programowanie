@@ -53,6 +53,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Podst Obiektow", "02 Pod
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstConsoleApplication", "FirstConsoleApplication\FirstConsoleApplication.vcxproj", "{9AC3DC0D-7E96-44D7-87C1-4B4060D1125E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReadAndWriteToFilesConsoleApplication", "ReadAndWriteToFilesConsoleApplication\ReadAndWriteToFilesConsoleApplication.vcxproj", "{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{9AC3DC0D-7E96-44D7-87C1-4B4060D1125E}.Release|x64.Build.0 = Release|x64
 		{9AC3DC0D-7E96-44D7-87C1-4B4060D1125E}.Release|x86.ActiveCfg = Release|Win32
 		{9AC3DC0D-7E96-44D7-87C1-4B4060D1125E}.Release|x86.Build.0 = Release|Win32
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Debug|x64.ActiveCfg = Debug|x64
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Debug|x64.Build.0 = Debug|x64
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Debug|x86.ActiveCfg = Debug|Win32
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Debug|x86.Build.0 = Debug|Win32
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Release|x64.ActiveCfg = Release|x64
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Release|x64.Build.0 = Release|x64
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Release|x86.ActiveCfg = Release|Win32
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -209,6 +219,7 @@ Global
 		{EFA93206-FDFE-4B9C-A278-4DEF09BE7590} = {181AD2B1-A824-43E4-A358-2875F04F5773}
 		{5E9605B9-E9B3-4AA1-96FC-53D348D3F507} = {B22F0E0E-0673-43CA-821D-88E62E6DBFF9}
 		{9AC3DC0D-7E96-44D7-87C1-4B4060D1125E} = {5E9605B9-E9B3-4AA1-96FC-53D348D3F507}
+		{5D1DEB76-67B4-4985-BA57-C56ABE6344C3} = {5E9605B9-E9B3-4AA1-96FC-53D348D3F507}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56F6D548-668F-4DCF-B4AF-05BBF7C0E832}

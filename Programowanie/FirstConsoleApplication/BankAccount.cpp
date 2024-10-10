@@ -10,4 +10,5 @@ public:
 	void AccountInformation
 		void DepositToAccount(double ammunt);
 	bool WitdthdrawalDromAccount(double amount);
+	void TranferBetweenAccounts(BankAccount& targetAccount, 8100)
 };
