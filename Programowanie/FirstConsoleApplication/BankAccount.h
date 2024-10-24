@@ -6,6 +6,8 @@ public:
 	double balance;
 	std::string owner;
 	std::string currency;
+public:
+
 
 	void AccountInfo()
 	{
