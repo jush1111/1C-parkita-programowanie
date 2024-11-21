@@ -24,6 +24,7 @@
     <ProjectGuid>{9ac3dc0d-7e96-44d7-87c1-4b4060d1125e}</ProjectGuid>
     <RootNamespace>FirstConsoleApplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>InheritanceConsoleApplication</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,10 +129,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BankAccount.cpp" />
-    <ClCompile Include="FirstConsoleApplication.cpp" />
+    <ClCompile Include="InheritanceConsoleApplication.cpp" />
+    <ClCompile Include="SavingBankAccount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BankAccount.h" />
+    <ClInclude Include="SavingBankAccount.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

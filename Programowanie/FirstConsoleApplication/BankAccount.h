@@ -1,34 +1,25 @@
-﻿#pragma once
-#include <iostream>
+﻿#include <iostream>
+
 class BankAccount
 {
-public:
+protected:
 	double balance;
 	std::string owner;
 	std::string currency;
+
+	bool isSetBalanceExecute = false;
+
+	void SetBalance(double b);
+
 public:
+	BankAccount();
+	BankAccount(double b, std::string o, std::string c);
 
+	double GetBalance();
 
-	void AccountInfo()
-	{
-		std::cout << "Informacje o koncie bankowym\n";
-		std::cout << "W³aœciciel: " << owner << "\n";
-		std::cout << "Saldo: " << balance << " " << currency << "\n";
-	}
+	void AccountInformation();
 
-	void DepositToAccount(double amount)
-	{
-		if (amount >= 0)
-			balance = balance + amount;
-	}
-
-	bool WithdrawToAccount(double amount)
-	{
-		if (amount <= 0 && balance >= amount)
-		{
-			balance = balance - amount;
-			return true;
-		}
-		return false;
-	}
+	void DepositToAccount(double amount);
+	bool WidthdrawalFromAccount(double amount);
+	void TransferBetweenAccounts(BankAccount& targetAcccount, double amount);
 };
