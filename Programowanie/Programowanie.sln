@@ -60,16 +60,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometricFigureConsoleApplication", "GeometricFigureConsoleApplication\GeometricFigureConsoleApplication.vcxproj", "{A31FF68A-8E7E-4479-937B-5FEA4A54DD6C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Matura", "Matura", "{446628A3-B7BA-43F0-BF56-E2546ED9A74E}"
-	ProjectSection(SolutionItems) = preProject
-		MaturaCzerwiecConsoleApplication\DANE\kluby.txt = MaturaCzerwiecConsoleApplication\DANE\kluby.txt
-		MaturaCzerwiecConsoleApplication\DANE\liczby.txt = MaturaCzerwiecConsoleApplication\DANE\liczby.txt
-		MaturaCzerwiecConsoleApplication\DANE\mecze.txt = MaturaCzerwiecConsoleApplication\DANE\mecze.txt
-		MaturaCzerwiecConsoleApplication\DANE\przyklad.txt = MaturaCzerwiecConsoleApplication\DANE\przyklad.txt
-		MaturaCzerwiecConsoleApplication\DANE\sedziowie.txt = MaturaCzerwiecConsoleApplication\DANE\sedziowie.txt
-		MaturaCzerwiecConsoleApplication\DANE\temperatury.txt = MaturaCzerwiecConsoleApplication\DANE\temperatury.txt
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaturaCzerwiecConsoleApplication", "MaturaCzerwiecConsoleApplication\MaturaCzerwiecConsoleApplication.vcxproj", "{A10AA667-B8D2-465F-B8F9-BFBB5F48C870}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Matura2024MajConsoleApplication", "Matura2024MajConsoleApplication\Matura2024MajConsoleApplication.vcxproj", "{848FEA2F-474A-4A04-A51F-60983FC4F145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -231,6 +225,14 @@ Global
 		{A10AA667-B8D2-465F-B8F9-BFBB5F48C870}.Release|x64.Build.0 = Release|x64
 		{A10AA667-B8D2-465F-B8F9-BFBB5F48C870}.Release|x86.ActiveCfg = Release|Win32
 		{A10AA667-B8D2-465F-B8F9-BFBB5F48C870}.Release|x86.Build.0 = Release|Win32
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Debug|x64.ActiveCfg = Debug|x64
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Debug|x64.Build.0 = Debug|x64
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Debug|x86.ActiveCfg = Debug|Win32
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Debug|x86.Build.0 = Debug|Win32
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Release|x64.ActiveCfg = Release|x64
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Release|x64.Build.0 = Release|x64
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Release|x86.ActiveCfg = Release|Win32
+		{848FEA2F-474A-4A04-A51F-60983FC4F145}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -264,6 +266,7 @@ Global
 		{A31FF68A-8E7E-4479-937B-5FEA4A54DD6C} = {5E9605B9-E9B3-4AA1-96FC-53D348D3F507}
 		{446628A3-B7BA-43F0-BF56-E2546ED9A74E} = {DF0E5EDF-EC02-4181-AA9C-7ED42104A9E6}
 		{A10AA667-B8D2-465F-B8F9-BFBB5F48C870} = {446628A3-B7BA-43F0-BF56-E2546ED9A74E}
+		{848FEA2F-474A-4A04-A51F-60983FC4F145} = {446628A3-B7BA-43F0-BF56-E2546ED9A74E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56F6D548-668F-4DCF-B4AF-05BBF7C0E832}
