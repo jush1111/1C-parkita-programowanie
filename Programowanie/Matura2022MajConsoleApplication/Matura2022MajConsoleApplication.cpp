@@ -1,20 +1,93 @@
-// Matura2022MajConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <fstream>
+#include <vector>
 
-int main()
+// zad 4.1
+void zad4_1()
 {
-    std::cout << "Hello World!\n";
+	std::ifstream file("przyk³lad.txt");
+
+	//int numbers[200];
+
+	//for (int i = 0; i < 200; i++)
+	//{
+	//	file >> numbers[i];
+	//}
+
+	//std::cout << "Odczytywanie liczby:\n";
+	//for (int i = 0; i < 200; i++)
+	//{
+	//	std::cout << numbers[i] << ", ";
+	//}
+
+	std::vector<int> numbers;
+
+	int num;
+	while (file >> num)
+		numbers.push_back(num);
+
+	/*for (int i = 0; i < numbers.size(); i++)
+	{
+		std::cout << num << ", ";
+	}*/
+
+	for (int num : numbers)
+	{
+		std::cout << num << ", ";
+	}
+
+	std::cout << "Zadanie 4.1\n";
+
+	int count = 0;
+	for (int num : numbers)
+	{
+		int firstDisits;
+		int lastDisits = num % 10;
+
+		int tmpNum = num;
+		do
+		{
+			firstDisits = tmpNum % 10;
+			tmpNum = tmpNum / 10;
+		} while (tmpNum != 0);
+
+		if (firstDisits == lastDisits)
+		{
+			count++;
+		}
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void zad4_3()
+{
+	std::ifstream file("liczby.txt");
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	int numbers[200];
+
+	int x;
+	int y;
+	int z;
+	int counter = 0;
+
+	for (int i = 0; i < 200; i++)
+	{
+		file >> numbers[i];
+		x = numbers[i];
+			
+
+		if (z % y == 0 && y % x == 0)
+		{
+			std::cout << "Dobre liczby: " << x << " " << y << " " << z;
+			counter++;
+		}
+
+	}
+
+
+}
+
+int main()
+
+{
+	zad4_3();
+}

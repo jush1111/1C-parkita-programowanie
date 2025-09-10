@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{30bbfa96-32cb-4d19-af41-f8787b9f7d4b}</ProjectGuid>
+    <ProjectGuid>{1afcf6ed-2839-4769-a24c-06fb8e227ac0}</ProjectGuid>
     <RootNamespace>ArrayConsoleApplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

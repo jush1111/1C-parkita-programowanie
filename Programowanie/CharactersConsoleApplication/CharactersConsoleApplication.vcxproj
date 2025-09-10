@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1be7f420-2c5f-4a1a-9c6f-14be39fc0094}</ProjectGuid>
+    <ProjectGuid>{ef7be7fd-e520-4ebc-a5ef-ad3d401d318b}</ProjectGuid>
     <RootNamespace>CharactersConsoleApplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

@@ -1,36 +1,37 @@
-Ôªø
+//01100001 01110010 01110100 01110101 01110010 01101011
 #include <iostream>
 
-//Napisz program, kt√≥ry wczyta np. 5 liczb
-//a nast√™pnie wy≈ìwietli je w odwrotnej kolejno≈ì√¶i.
+//Napisz program ktÛry wczyta np. 5 liczb i wyswietli je w odwrotnej kolejnoúci.
 void task1()
 {
 	const unsigned short ARRAY_SIZE = 5;
-	int number[ARRAY_SIZE];
+	int numbers[ARRAY_SIZE];
+
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
-		std::cout << "Hive a number";
-		std::cin >> number[i];
+		std::cout << "Podaj dana: ";
+		std::cin >> numbers[i];
 	}
+
 	for (int i = ARRAY_SIZE - 1; i >= 0; i--)
 	{
-		std::cout << number[i] << ", ";
+		std::cout << numbers[i] << " , ";
 	}
 	std::cout << "\n";
 }
 
-//Napisz program obliczajƒÖcy ≈õredniƒÖ arytmetycznƒÖ element√≥w w tablicy liczb ca≈Çkowitych.
+//Napisz program obliczajπcy úredniπ arytmetycznπ elemÍtÛw w tablicy liczb ca≥kowitych
 void task2()
 {
-	//LOWER_RANGE; UPPER_RANGE > przy za≈Ço≈ºeniu, ≈ºe LOWER_RANGE <= UPPER_RANGE
+	const unsigned short ARRAY_SIZE = 5;
+	int numbers[ARRAY_SIZE];
+
 	const unsigned short LOWER_RANGE = 5;
 	const unsigned short UPPER_RANGE = 7;
 
-	const unsigned short ARRAY_SIZE = 3;
-	int numbers[ARRAY_SIZE];
-	
-	srand(time(0));
-	std::cout << "wylosowane liczby:\n";
+	srand(time(NULL));
+
+	std::cout << "wylosowane liczby: \n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
@@ -43,22 +44,21 @@ void task2()
 	{
 		sum = sum + numbers[i];
 	}
-
 	double avg = sum * 1.0 / ARRAY_SIZE;
-	std::cout << "srdnia wynosi: " << avg << "\n";
-
+	std::cout << "årednia wynosi: " << avg << "\n";
 }
 
-//Napisz program, kt√≥ry uzupe≈Çni tablicƒô liczbami losowymi a nastƒôpnie znajdzie minimum oraz maksimum.
+//Napisz program, ktÛry uzupe≥ni tablicÍ liczbami losowymi a nastÍpnie znajdzie minimum oraz maksimum.
 void task3()
 {
-	const unsigned short LOWER_RANGE = 5;
-	const unsigned short UPPER_RANGE = 7;
+	const short LOWER_RANGE = 0;
+	const short UPPER_RANGE = 70;
 
-	const unsigned short ARRAY_SIZE = 3;
+	const unsigned short ARRAY_SIZE = 100;
 	int numbers[ARRAY_SIZE];
 
 	srand(time(0));
+
 	std::cout << "wylosowane liczby:\n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
@@ -72,28 +72,27 @@ void task3()
 	{
 		if (numbers[i] > max)
 			max = numbers[i];
-
 	}
-	std::cout << "max to:" << max << "\n";
+
+	std::cout << "Max to: " << max << "\n";
 
 	int min = numbers[0];
 	for (int i = 1; i < ARRAY_SIZE; i++)
 	{
 		if (numbers[i] < min)
 			min = numbers[i];
-
 	}
-	std::cout << "min to:" << min  << "\n";
+
+	std::cout << "Min to: " << min << "\n";
 }
 
-
-//Napisz program, kt√≥ry wyznaczy wszystkie liczby pierwsze od 2 do zadeklarowanego zakresu. Metoda sito Eratostenesa.
+//Napisz program, ktÛry wyznaczy wszystkie liczby pierwsze od 2 do zadeklarowanego zakresu. Metoda sito Eratostenesa.
 void task4()
 {
-	const long long UPPER_RANGE = 1000000;
+	const long long UPPER_RANGE = 70;
 
 	//wersja 1
-
+	/*
 	for (long long numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
 	{
 		bool isPrime = true;
@@ -109,7 +108,8 @@ void task4()
 		if (isPrime)
 			std::cout << numberToCheck << ", ";
 	}
-	std::cout << "\n";
+	std::cout << "Gotowe\n";
+	*/
 
 	//wersja 2
 	bool sieveOfEratosthenes[UPPER_RANGE + 1];
@@ -136,44 +136,40 @@ void task4()
 	std::cout << "\n";
 }
 
-
-//Napisz program, kt√≥ry wczyta numer dnia tygodnia a nastepnie wyswietli nazee tego dnia lub komunikat bledu
+//Napisz program, ktÛry wczyta numer dnia tygodnia a nastÍpnie wyúwietli nazwÍ tego dnia lub komunikat b≥Ídu.
 void task5()
 {
 	int numberOfWeek;
-	std::cout << "podaj numer dnia tygodnia\n";
+	std::cout << "Podaj numer: ";
 	std::cin >> numberOfWeek;
 
-	std::string dayNames[] = { "Poniedzia≈Çek", "Wtorek", "≈õroda", "czwartek", "piatek", "sobota", "niedziela" };
-	//dayNames[0] = "poniedzialek";
-	//dayNames[1] ="wtorek';
-	//kontynukacja dni
+	std::string dayName[] = { "POniedzia≥ek", "Wtorek", "åroda", "Czwartek", "Piπtek", "Sobota", "Niedziela" };
 
-	if (numberOfWeek >= 0 && numberOfWeek <= 6)
-		std::cout << "ten dzien to" << dayNames[numberOfWeek] << "\n";
-	else
-		std::cout << "niepoprawany dzien\n";
+	//if (numberOfWeek >= 0 && numberOfWeek = 6)
+	std::cout << "DzieÒ to " << dayName[numberOfWeek] << std::endl;
+	//else
+	std::cout << "Nieprawidlowy nr dnia \n";
 }
 
-//napisz program ktory posortuje podane elementy
+//Napisz program, ktÛry porsortuje tablice liczb sposobem przez wybÛr.
 void task6()
 {
-	const unsigned short LOWER_RANGE = 1;
-	const unsigned short UPPER_RANGE = 70;
+	const short LOWER_RANGE = 0;
+	const short UPPER_RANGE = 70;
 
 	const unsigned short ARRAY_SIZE = 10;
 	int numbers[ARRAY_SIZE];
 
-	srand(time(0));
-	std::cout << "wylosowane liczby:\n";
+	//losowanie liczb
+	srand(time(NULL));
+	std::cout << "Wylosowane liczby: \n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
 		std::cout << numbers[i] << ", ";
 	}
-	std::cout << "\n";
-	//--------------------------------------------------------------------------------------------------------------
 
+	//sortowanie
 	for (int i = 0; i < ARRAY_SIZE - 1; i++)
 	{
 		int minIndex = i;
@@ -187,37 +183,36 @@ void task6()
 		numbers[i] = tmp;
 	}
 
-	std::cout << "posortowane liczby:\n";
+	std::cout << "\nPostrtowane liczby to:\n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		std::cout << numbers[i] << ", ";
 	}
-	std::cout << "\n";
+	std::cout << std::endl;
 }
 
-//napisz program ktory posortuje tablcie liczb sposobem przez wstawianie
+//Napisz program, ktÛry porsortuje tablice liczb sposobem przez wstawianie
 void task7()
 {
-	const unsigned short LOWER_RANGE = 1;
-	const unsigned short UPPER_RANGE = 70;
+	const short LOWER_RANGE = 0;
+	const short UPPER_RANGE = 70;
 
 	const unsigned short ARRAY_SIZE = 10;
 	int numbers[ARRAY_SIZE];
 
-	srand(time(0));
-	std::cout << "wylosowane liczby:\n";
+	srand(time(NULL));
+	std::cout << "Wylosowane liczby: \n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
 		std::cout << numbers[i] << ", ";
 	}
 	std::cout << "\n";
-	//--------------------------------------------------------------------------------------------------------------
+
 
 	for (int i = 1; i < ARRAY_SIZE; i++)
 	{
 		int pom = numbers[i];
-
 		int j;
 		for (j = i - 1; j >= 0 && numbers[j] > pom; j--)
 		{
@@ -226,7 +221,7 @@ void task7()
 		numbers[j + 1] = pom;
 	}
 
-	std::cout << "posortowane liczby:\n";
+	std::cout << "Posortowane liczby to: \n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		std::cout << numbers[i] << ", ";
@@ -234,40 +229,37 @@ void task7()
 	std::cout << "\n";
 }
 
-
-//napisz program ktory posortuje tablcie liczb sposobem babelkowym
+//Napisz program, ktÛry porsortuje tablice liczb sposobem bπbelkowym.
 void task8()
 {
-	const unsigned short LOWER_RANGE = 1;
-	const unsigned short UPPER_RANGE = 70;
+	const short LOWER_RANGE = 0;
+	const short UPPER_RANGE = 70;
 
 	const unsigned short ARRAY_SIZE = 10;
 	int numbers[ARRAY_SIZE];
 
-	srand(time(0));
-
-	std::cout << "wylosowane liczby:\n";
+	srand(time(NULL));
+	std::cout << "Wylosowane liczby: \n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
 		std::cout << numbers[i] << ", ";
 	}
 	std::cout << "\n";
-	//--------------------------------------------------------------------------------------------------------------
 
-	for(int i = 0; i < ARRAY_SIZE - 1; i++)
-		for (int j = 0; i < ARRAY_SIZE - 1; i++)
+	for (int i = 0; i < ARRAY_SIZE -1; i++)
+		for (int j = 0; j < ARRAY_SIZE -1; j++)
 			if (numbers[j] > numbers[j + 1])
 			{
 				int tmp = numbers[j];
 				numbers[j] = numbers[j + 1];
 				numbers[j + 1] = tmp;
 			}
-	
-	std::cout << "posortowane liczby:\n";
+
+	std::cout << "Posortowane liczby to: \n";
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
-		std::cout << numbers[i] << ",";
+		std::cout << numbers[i] << ", ";
 	}
 	std::cout << "\n";
 }
@@ -275,12 +267,6 @@ void task8()
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
-	//task1();
-	//task2();
-	//task3();
-	//task4();
-	//task5();
-	//task6();
-	//task7();
+
 	task8();
 }

@@ -1,259 +1,284 @@
+//01000001 01110010 01110100 01110101 01110010 01001011
 #include <iostream>
 
+/*
+**Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym. Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
+*
+*
+*
+*
+*
+*
 
-//napisz program który pobierze znak od uzytkownika i wyswietli go 
+* Program który na wejœciu przyjmie równanie a na wyjœciu da równanie w odwrotnej notacji polskiej ONP. Np. na wejœciu 2+3*4 na wyjœcu da 234*+
+* Program, który na wejœciu przyjmie  a na wyjœciu wyœwietli wynik rówania.
+*
+*/
+
+//Napisz program ktory pobierze znak
 void task1()
 {
 	char characterFromUser;
-	std::cout << "podaj znak\n";
+	std::cout << "Podaj znak: ";
 	std::cin >> characterFromUser;
-
-	std::cout << "poda³eœ znak:" << characterFromUser << "\n";
+	std::cout << characterFromUser;
 }
 
-//napisz program ktory wczyta znak  z klawiatury i sprawdzi czy jest to mala litera alfabetu
+//Napisz program, który wczyta znak z klawiatury 
+//i sprawdzi czy to ma³a litera alfabetu.
 void task2()
 {
 	char characterFromUser;
-	std::cout << "podaj znak\n";
+	std::cout << "Podaj znak: ";
 	std::cin >> characterFromUser;
 
-	//if (characterFromUser >= 97 && characterFromUser <= 122)
+	//if(characterFromUser >= 97 && characterFromUser <= 122)
 	if (characterFromUser >= 'a' && characterFromUser <= 'z')
-		std::cout << "jest to mala litera alfabetu\n";
+		std::cout << "Ma³a litera alfabetu.\n";
 	else
-		std::cout << "nie jest to mala litera alfabetu\n";
+		std::cout << "Nie ma³a litera alfabetu.\n";
 
-	/*
-	char x = 'a';
+	/*char x = 'a';
 	std::cout << x;
-	x = 'g' + 1
+	x = 'g' + 1;
 	std::cout << x;
-	x = 100;
-	std::cout << x;
+
 	*/
 }
 
-//Napisz program, ktory poprosi cie o twoje imie i cie przywita
+//Napisz program, który poprosi o podanie imienia i sie przywita.
 void task3()
 {
-	std::string userName;
-	std::cout << "podaj swoje imie\n";
-	std::cin >> userName;
-
-	std::cout << "witaj " << userName << "tutaj \n";
+	std::string username = "";
+	std::cout << "Podaj imie: ";
+	std::cin >> username;
+	std::cout << "Witaj " << username << "\n";
 }
 
-//Napisz program sprawdzaj¹cy czy podane haslo jest poprawne
-//(np jeslihaslo jest "abc123" program powinien wyswietlic "haslo poprawne"
-//jesli jest inne powinien wyswietlic "haslo niepoprawne")
+//Napisz program, który sprawdzi czy podane has³o jest poprawne
+//np. jesli haslo = abc123 wyswietli poprawne has³o.
+//jesli nie wyswietli niepoprawne has³o.
 void task4()
 {
 	std::string password;
-	std::cout << "podaj haslo\n";
+	std::cout << "Podaj has³o: ";
 	std::cin >> password;
 
 	if (password == "abc123")
-		std::cout << "haslo poprawne\n";
+		std::cout << "Haslo poprawne\n";
 	else
-		std::cout << "haslo niepoprawne\n";
+		std::cout << "Haslo niepoprawne\n";
 }
 
-//napisz program ktory wczyta lancuch znakow i policzy ile jest malych liter 'a'
+//Napisz program, który wczyta ³añcuch znaków i policzy ile jest ma³ych liter 'a'.
 void task5()
 {
 	std::string textFromUser;
-	std::cout << "podaj lancuhc nzsakow \n";
+	std::cout << "Podaj ³añcuch znaków\n";
 	std::cin >> textFromUser;
 
-	int numberOfCharacters = 0;
+	int numerOfCharacters = 0;
 
-	//std::cout << "pierwszy znak to " << textFromUser[0] << "\n";
-	//textFromUser[1] = 'x';
-	//std::cout << "ilosc znakow " <<  textFromUser.length() << "\n";
+	/*std::cout << "Pierwszy znak to " << textFromUser[0] << "\n";
+	textFromUser[1] = 'x';
+	std::cout << "Iloœæ znakow " << textFromUser.length() << "\n";*/
 
 	for (int i = 0; i < textFromUser.length(); i++)
 	{
 		if (textFromUser[i] == 'a')
-			numberOfCharacters++;
+			numerOfCharacters++;
 	}
-	std::cout << "malych liter 'a' jest " << numberOfCharacters << "\n";
+	std::cout << "Jest " << numerOfCharacters << " liter 'a'\n";
 }
 
-
-/*
-* Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
-* Program wyci¹gaj¹cy informacje z numeru PESEL
-* Program implementuj¹cy algorytm szyfrowania Cezara (proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
-* Program który na wejœciu przyjmie równanie a na wyjœciu da równanie w odwrotnej notacji polskiej ONP. Np. na wejœciu 2+3*4 na wyjœcu da 234*+
-* Program, który na wejœciu przyjmie rówanie w ONP a na wyjœciu wyœwietli wynik rówania.
-*/
-
-// Napisz program, który bêdzie prosi³ o has³o. Nie przepuœci dalej dopóki nie zostanie ono podane prawid³owo.
+//Napisz program, który bêdzie prosi³ o has³o. Nie przepuœci dalej dopóki nie zostanie ono podane prawid³owo.
 void task6()
 {
 	std::string password;
-		do
-		{
-			std::cout << "podaj haslo\n";
-			std::cin >> password;
-			
-		}while (password != "abc123");
-		std::cout << "gratulacje dobre chaslo";
-}
-
-//Napisz program, który pobiera od u¿ytkownika ci¹g znaków i wyœwietla liczbê samog³osek i spó³g³osek w tym ci¹gu.
-void task7()
-{
-	std::string charactersFromUser;
-	std::cout << "podaj ciag znakow";
-	std::cin >> charactersFromUser;
-
-	int numberOfVowel = 0; //samog³oska
-	int numberOfConsonant = 0; //spó³g³oska
-
-	for (int i = 0; i < charactersFromUser.length(); i++)
-	{
-		if (charactersFromUser[i] == 'a'
-			|| charactersFromUser[i] == '¹'
-			|| charactersFromUser[i] == 'e'
-			|| charactersFromUser[i] == 'ê'
-			|| charactersFromUser[i] == 'i'
-			|| charactersFromUser[i] == 'o'
-			|| charactersFromUser[i] == 'i'
-			|| charactersFromUser[i] == 'y')
-			numberOfVowel++;
-		else if (charactersFromUser[i] >= 'a' && charactersFromUser[i] <= 'z')
-			numberOfConsonant++;
-	}
-	std::cout << "w tym ciagu jest " << numberOfVowel << " samogloski                                                                                                                                                                                                                                                                                                      i " << numberOfConsonant << " spo³g³oski \n";
-}
-
-//Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym.
-//Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
-void task8()
-{
-	int numberFromUser;
-	int tmpNumber;
-	std::string tmpNumberInBin;
-	std::string numberInBin;
-	std::cout << "Podaje liczbe: \n";
-	std::cin >> numberFromUser;
-	tmpNumber = numberFromUser;
+	std::cout << "Podaj has³o: ";
+	std::cin >> password;
 
 	do
 	{
-		tmpNumberInBin = tmpNumber / 2;
-		numberInBin = numberInBin + tmpNumberInBin;
-	} while (tmpNumber == 0);
+		std::cout << "Podaj has³o: ";
+		std::cin >> password;
+		if (password == "abc123")
+			std::cout << "Haslo poprawne\n";
+		else
+			std::cout << "Haslo niepoprawne\n";
 
-	std::cout << numberInBin << "\n";
+	} while (password != "abc123");
 
-	
-	
-} 
+}
 
-
-// Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem 
-// (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
-void task9()
+//01000001 01110010 01110100 01110101 01110010 01001011
+//Napisz program, który pobiera od u¿ytkownika ci¹g znaków i wyœwietla liczbê samog³osek i spó³g³osek w tym ci¹gu.
+void task7()
 {
-	std::string textFromUser;
-	std::cout << "podaj tekst\n";
-	std::cin >> textFromUser;
+	std::string characterFromUser;
+	std::cout << "Podaj cig znaków: ";
+	std::cin >> characterFromUser;
+
+	//samog³oska
+	int numberOfVowel = 0;
+	//spó³g³oska
+	int numberOfConsonant = 0;
+
+	for (int i = 0; i < characterFromUser.length(); i++)
+	{
+		if (characterFromUser[i] == 'a'
+			|| characterFromUser[i] == '¹'
+			|| characterFromUser[i] == 'e'
+			|| characterFromUser[i] == 'ê'
+			|| characterFromUser[i] == 'i'
+			|| characterFromUser[i] == 'o'
+			|| characterFromUser[i] == 'u'
+			|| characterFromUser[i] == 'y')
+			numberOfVowel++;
+		else if (characterFromUser[i] >= 'a' && characterFromUser[i] <= 'z')
+			numberOfConsonant++;
+	}
+	std::cout << "W tym ciagu jest " << numberOfVowel << " samog³osek i " << numberOfConsonant << " spó³g³osek\n";
+}
+
+//Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem
+//(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+void task8()
+{
+	int t = 0;
+	std::string characterFromUser;
+	std::string reverse;
+	std::cout << "Podaj ciag znakow: ";
+	std::cin >> characterFromUser;
 
 	//wersja 1
-	std::string reverseText = "";
-	
-	for (int i = textFromUser.length() - 1; i >= 0; i--)
+	/*for (int i = characterFromUser.length() - 1; i >= 0; i--)
 	{
-		reverseText = reverseText + textFromUser[i];
+		reverse = reverse + characterFromUser[i];
 	}
 
-	/*
-	for (int i = 0; i < textFromUser.length(); i++)
-	{
-		reverseText = reverseText[i] + textFromUser;
-	}
-	*/
-
-	if (textFromUser == reverseText)
-		std::cout << "ten tekst jest palindromem\n";
+	if (characterFromUser == reverse)
+		std::cout << "Text jest palindromem\n";
 	else
-		std::cout << "ten tekst nie jest palindromem\n";
+		std::cout << "Text nie jest palindromem\n";*/
 
-	//wersja 2
-	bool isPalindrome = true;
+		//wersja 2
+		/*int t = 0;
+			std::string textFromUser;
+			std::string reverse;
+			std::cout << "Podaj ciag znakow: ";
+			std::cin >> textFromUser;
 
-	for (int signFromBegining = 0, signFromEnd = textFromUser.length() - 1; signFromBegining < signFromEnd; signFromBegining++, signFromEnd--)
-	{
-		if (textFromUser[signFromBegining] != textFromUser[signFromEnd])
-		{
-			isPalindrome = false;
-			break;
-		}
-	}
+			bool isPalindrome = true;
 
-	if (isPalindrome /*== true*/)
-		std::cout << "Ten tekst jest palindromem\n";
-	else
-		std::cout << "Ten tekst nie jest palindromem\n";
+			for (int signFromBegining = 0, signFormEnd = textFromUser.length() - 1; signFromBegining < signFormEnd; signFromBegining++, signFormEnd--)
+			{
+				if (textFromUser[signFromBegining] != textFromUser[signFormEnd])
+				{
+					isPalindrome = false;
+					break;
+				}
+			}
+
+			if (isPalindrome)
+				std::cout << "Ten tekst jest palindromem\n";
+			else
+				std::cout << "Ten tekst nie jest palindromem\n";*/
 }
 
-//Algorytm szyfrowania AtBash Cipher - algorytm szyfruj¹cy, w którym ka¿da litera jest zamieniana na literê z przeciwnej strony alfabetu
-//  (np. A na Z, B na Y itd.)
+//Program implementuj¹cy algorytm szyfrowania Cezara 
+//(proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
 void task10()
 {
-	std::string textFromUser;
-	std::cout << "podaj tekst\n";
-	std::cin >> textFromUser;
+	std::string text;
+	std::cout << "Podaj ci¹g: ";
+	std::cin >> text;
 
-	for (int i = 0; i < textFromUser.length(); i++)
+	for (int i = 0; i < text.length(); i++)
 	{
-		if (textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
-		 textFromUser[i] = 'z' - (textFromUser[i] - 'a');
-
-		if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z')
-			textFromUser[i] = 'Z' - (textFromUser[i] - 'A');
-
-		if (textFromUser[i] >= '0' && textFromUser[i] <= '9')
-			textFromUser[i] = '9' - (textFromUser[i] - '0');
+		text[i] += 3;
 	}
-	std::cout << "zaszyfrowany tekst: " << textFromUser << "\n";
-
-	for (int i = 0; i < textFromUser.length(); i++)
-	{
-		if (textFromUser[i] >= 'a' && textFromUser[i] <= 'z')
-			textFromUser[i] = 'a' + ('z' - textFromUser[i]);
-
-		if (textFromUser[i] >= 'A' && textFromUser[i] <= 'Z')
-			textFromUser[i] = 'A' + ('Z' - textFromUser[i]);
-
-		if (textFromUser[i] >= '0' && textFromUser[i] <= '9')
-			textFromUser[i] = '0' + ('9' - textFromUser[i]);
-	}
-	std::cout << "rozszyfrowany tekst " << textFromUser << "\n";
+	std::cout << text;
 }
 
- 
+//Program wyci¹gaj¹cy informacje z numeru PESEL
+void task11()
+{
+	std::string pesel;
+	std::string year;
+	std::string mounth;
+	std::string day;
+
+	std::cout << "Podaj pesel: ";
+	std::cin >> pesel;
+
+	if (pesel.length() == 11)
+	{
+		year += pesel[0];
+		year += pesel[1];
+		mounth += pesel[2];
+		mounth += pesel[3];
+		day += pesel[4];
+		day += pesel[5];
+
+		std::cout << "Rok = " << year << "\n";
+		std::cout << "Miesi¹c = " << mounth << "\n";
+		std::cout << "Dzieñ = " << day << "\n";
+	}
+}
+
+//Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami
+//(czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
+void task9()
+{
+	std::string firstText;
+	std::string secoundText;
+	std::cout << "Podaj 1 ci¹g: ";
+	std::cin >> firstText;
+	std::cout << "Podaj 1 ci¹g: ";
+	std::cin >> firstText;
+
+	for (int i = 0; i < firstText.length(); i++)
+	{
+		for (int j = 0; j < secoundText.length(); j++)
+		{
+			if (firstText[i] == secoundText[j])
+				;
+		}
+	}
+}
+
+//Algorytm szyfrowania AtBash Cipher
+//algorytm szyfruj¹cy, w którym ka¿da litera jest zamieniana na literê z przeciwnej strony alfabetu (np. A na Z, B na Y itd.)
+void task12()
+{
+	std::string text;
+	std::string textCrypted = "";
+	char tmp;
+	std::cout << "Podaj text: ";
+	std::cin >> text;
+
+	for (int i = 0; i < text.length(); i++)
+	{
+		tmp = text[i];
+		textCrypted = textCrypted + tmp;
+	}
+	std::cout << textCrypted;
+}
+
 
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
-	//task1();
-	//task2();
-	//task3()
-	//task4()
-	//task5();
-	//task6();
-	//task7();
-	//task8();
-	//task9();
-	task10();
+
+	task12();
 }
 
 /*
-typy znakowe:
-*char - 1bajt calkowitoliczbowa ze znakiem <- 128; 127>
-*	`
+Typy znakow:
+* char - 1 bajt ca³owito liczbowa <-128; 127> 'a'
+* std::string - ciag znakow "abc123"
+
+
+	9 12 niedokoncz
 */

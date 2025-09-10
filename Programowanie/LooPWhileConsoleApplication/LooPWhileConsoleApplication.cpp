@@ -1,121 +1,92 @@
-ï»¿// LooPWhileConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 
-
-
-//napisz program ktory policzy sume cyfr podanej przez uzytkownika 
 void task1()
 {
-	int number;
-	std::cout << "Podaj liczbÄ™\n";
-	std::cin >> number;
+	long long num, rest;
+	long long numberOfNumbers = 0;
+	std::cout << "Podaj liczbe: ";
+	std::cin >> num;
 
-	int sum = 0;
-	int rest;
-
-	while (number != 0)
+	do
 	{
-		rest = number % 10;
-		sum = sum + rest;
-		number = number / 10;
-	}
-
-	std::cout << "Suma " << sum << "\n";
-	//4125
+		numberOfNumbers++;
+		rest = num % 10;
+		num = num / 10;
+	} while (num != 0);
+	std::cout << "Liczba liczb = " << numberOfNumbers << "\n";
 }
 
-//Napisz program, ktÃ³ry policzy NWD dwÃ³ch liczb.
+//Napisz program ktory policzy NWD dwoch liczb.
 void task2()
 {
 	int firstNumber, secondNumber;
-	std::cout << "podaj pierwsza liczbe\n";
-	std::cin >>  firstNumber;
-	std::cout << "podaj druga liczba\n";
+	std::cout << "Podaj 1 liczbe: ";
+	std::cin >> firstNumber;
+	std::cout << "Podaj 2 liczbe: ";
 	std::cin >> secondNumber;
 
-	int nwd;
+	int nwd = 1;
 
-	if (firstNumber < secondNumber)
+	//nwd = (firstNumber < secondNumber) ? firstNumber : secondNumber;
+
+	//wersja 1
+	/*if (firstNumber < secondNumber)
 		nwd = firstNumber;
 	else
 		nwd = secondNumber;
 
-	nwd = (firstNumber < secondNumber) ? firstNumber : secondNumber;
 
-	/*
-	if (secondNumber % nwd != 0 || firstNumber % nwd != 0)
-	{
+	while (secondNumber % nwd != 0
+		|| firstNumber % nwd != 0)
 		nwd--;
-		if (secondNumber % nwd != 0 || firstNumber % nwd != 0)
-		{
-			nwd--;
-			if (secondNumber % nwd != 0 || firstNumber % nwd != 0)
-			{
-				nwd--;
-				//if...
-			}
-		}
-	}
-	*/
 
-	while (secondNumber % nwd != 0 || firstNumber % nwd != 0)
-	{
-		nwd--;
-	} 
-	std::cout << "NWD = " << nwd << "\n";
-
-
+	std::cout << "NWD = " << nwd;*/
 
 	//wersja 2
-	nwd = 1;
+	/*int tmpFirstNumber, tmpSecondNumber;
 	int dividend = 2;
-	int tmpFirstNumber = firstNumber, tmpSecondNumber = secondNumber;
+	tmpFirstNumber = firstNumber;
+	tmpSecondNumber = secondNumber;
+
 	while (tmpFirstNumber >= dividend
 		&& tmpSecondNumber >= dividend)
 	{
 		if (tmpFirstNumber % dividend == 0
 			&& tmpSecondNumber % dividend == 0)
 		{
-			tmpFirstNumber = tmpFirstNumber / dividend;
+			tmpFirstNumber /= dividend;
 			tmpSecondNumber /= dividend;
 			nwd *= dividend;
 		}
 		else
 			dividend++;
 	}
-	std::cout << "NWD = " << nwd << "\n";
-
-
+	std::cout << "NWD = " << nwd << "\n";*/
 
 	//wersja 3
 	//NWD(a, b) = a				jesli b = 0
-	//NWD(a, b) = NWD(b, a %  b) jesli b != 0 
-
+	//NWD(a, b) = nwd(b,a%b)	jesli b!= 0
 	int a = firstNumber, b = secondNumber;
 	while (b != 0)
 	{
 		int tmpA = a;
 		a = b;
 		b = tmpA % b;
-		
 	}
 	nwd = a;
-	std::cout << "NWD = " << nwd << "\n";
-		
+	std::cout << "NWD = " << a << "\n";
 }
 
-//Sprawdzanie czy liczba jest palindromem
+//sprawdzenie czy liczba jest palindromem.
 void task3()
 {
 	int number;
-	std::cout << "Podaj liczbÃª\n";
+	std::cout << "Podaj liczbê\n";
 	std::cin >> number;
 
 	//wersja 1
 
-	/* //obliczam iloÅ“Ã¦ cyfr
+	/* //obliczam iloœæ cyfr
 	int tmpNumber = number;
 	int numberOfDigit = 1;
 	while (tmpNumber >= 10)
@@ -123,16 +94,19 @@ void task3()
 		numberOfDigit++;
 		tmpNumber = tmpNumber / 10;
 	}
-	//liczÃª 10 do potÃªgi (numberOfDigit - 1)
+
+	//liczê 10 do potêgi (numberOfDigit - 1)
 	int leftDivided = 1;
 	while (numberOfDigit != 1)
 	{
 		leftDivided *= 10;
 		numberOfDigit--;
 	}
+
 	int rightDivided = 10;
 	int leftNumber = number;
 	int rightNumber = number;
+
 	bool isPalindrome = true;
 	while (leftNumber > 10)
 	{
@@ -143,10 +117,13 @@ void task3()
 			isPalindrome = false;
 			break;
 		}
+
 		leftNumber = leftNumber % leftDivided;
 		rightNumber = rightNumber / rightDivided;
+
 		leftDivided = leftDivided / 10;
 	}
+
 	if (isPalindrome /*== true*//*)
 		std::cout << "Liczba jest palindromem\n";
 	else
@@ -167,33 +144,31 @@ void task3()
 		std::cout << "Liczba jest palindromem\n";
 	else
 		std::cout << "Liczba nie jest palindromem\n";
-
-	
 }
 
-//napisz program, ktory wyswitli "hello world" tyle razy ile chce uzytkownik
+//Napisz program, który wyswietli "Hello World" tyle razy ile chce uzutkownik.
 void task4()
 {
 	int howManyTimes;
-	std::cout << "Podaj ile razy wyswietlic\n";
+	std::cout << "Ile razy wypisac Hello World: ";
 	std::cin >> howManyTimes;
 
 	int i = 0;
 	while (i != howManyTimes)
 	{
-		std::cout << "hello world\n";
+		std::cout << "Hello World\n";
 		i++;
 	}
 }
 
-//Napisz program, ktÃ³ry wyswietli liczby parzyste do podanej prez uzytkownika liczby
+//Napisz program, który wyswietli liczby parzyste od podanej przy urzytkownika liczby
 void task5()
 {
 	int upperRange;
-	std::cout << "Podaj gurna granice do wyswietlenia\n";
+	std::cout << "Podaj gorna granice do wyswietlenia: ";
 	std::cin >> upperRange;
 
-	int i = 0; 
+	int i = 0;
 	while (i <= upperRange)
 	{
 		std::cout << i << "\n";
@@ -201,11 +176,7 @@ void task5()
 	}
 }
 
-	int main()
-	{
-		//task1();
-		//task2();
-		//task3();
-		//task4();
-		task5();
-	}
+int main()
+{
+	task5();
+}
