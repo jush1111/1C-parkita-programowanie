@@ -29,8 +29,19 @@ void ParametrTest_v1(int p)
     Console.WriteLine($"parametr w parametrtest_v1  {p}");
 }
 
+void ParametrTest_v2(ref int p)
+{
+    Console.WriteLine($"parametr w parametrtest_v2  {p}");
+    p++;
+    Console.WriteLine($"parametr w parametrtest_v2  {p}");
+}
+
 firstNumber = 15;
 Console.WriteLine($"firstNumber przed {firstNumber}");
 ParametrTest_v1(firstNumber);
 Console.WriteLine($"firstnumber po {firstNumber}");
-```
+
+firstNumber = 15;
+Console.WriteLine($"firstNumber przed {firstNumber}");
+ParametrTest_v2(ref firstNumber);
+Console.WriteLine($"firstnumber po {firstNumber}");
