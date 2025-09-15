@@ -45,3 +45,5 @@ firstNumber = 15;
 Console.WriteLine($"firstNumber przed {firstNumber}");
 ParametrTest_v2(ref firstNumber);
 Console.WriteLine($"firstnumber po {firstNumber}");
+
+
