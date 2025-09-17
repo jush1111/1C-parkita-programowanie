@@ -47,3 +47,20 @@ ParametrTest_v2(ref firstNumber);
 Console.WriteLine($"firstnumber po {firstNumber}");
 
 
+void ParametrTest_v3(out int p)
+{
+    //Console.WriteLine($"Parametr: {p}");
+    p = 19;
+    Console.WriteLine($"Parametr: {p}");
+}
+
+int thirdNumber = 12;
+ParametrTest_v3(out thirdNumber);
+Console.WriteLine($"thirdNumber to {thirdNumber}");
+
+string firstStrNumber = "15";
+int firstConvertedNumber = int.Parse(firstStrNumber);
+Console.WriteLine($"po konwersji {firstConvertedNumber}");
+
+if (int.TryParse(firstStrNumber, out int secondConvertNumber)) ;
+Console.WriteLine($"Udało sie skonwertować {secondConvertNumber}");
