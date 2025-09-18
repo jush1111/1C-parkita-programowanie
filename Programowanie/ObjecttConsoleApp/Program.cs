@@ -44,3 +44,4 @@ Console.WriteLine($"firstPointStruct ({firstPoinStruct.x} , {firstPoinStruct.y}"
 PointClass firstPointClass = new PointClass();
 firstPointClass.x = 15;
 firstPointClass.y = 99;
+  
