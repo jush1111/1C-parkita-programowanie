@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectConsoleApp
+namespace ObjectConsoleApp;
+
+internal struct PointStruct
 {
-    internal class Class1
-    {
-    }
+    public int x;
+    public int y;
 }
