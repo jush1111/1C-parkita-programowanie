@@ -1,0 +1,15 @@
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\bin\Debug\net8.0\PracticalTasksConsoleApp.exe
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\bin\Debug\net8.0\PracticalTasksConsoleApp.deps.json
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\bin\Debug\net8.0\PracticalTasksConsoleApp.runtimeconfig.json
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\bin\Debug\net8.0\PracticalTasksConsoleApp.dll
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\bin\Debug\net8.0\PracticalTasksConsoleApp.pdb
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.AssemblyInfo.cs
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.sourcelink.json
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.dll
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\refint\PracticalTasksConsoleApp.dll
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.pdb
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\PracticalTasksConsoleApp.genruntimeconfig.cache
+C:\Users\Uczen\Desktop\FILIP PARKITA\Programowanie\PracticalTasksConsoleApp\obj\Debug\net8.0\ref\PracticalTasksConsoleApp.dll
